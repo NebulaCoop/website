@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NebulaCoop: online co-op for Super Mario Galaxy on PC</title>
+  <meta name="description" content="NebulaCoop is a fork of keepvaibin's Nebula, the native PC port of Super Mario Galaxy, that adds online co-op in the spirit of sm64coopdx.">
+  <meta name="theme-color" content="#0b0f2a">
+  <meta property="og:title" content="NebulaCoop">
+  <meta property="og:description" content="Online co-op for Super Mario Galaxy on PC. A fork of Nebula by keepvaibin.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nebula.mackery.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="/">
+        <img src="/favicon.svg" alt="" width="28" height="28">
+        <span>NebulaCoop</span>
+      </a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#play">Play online</a></li>
+        <li><a href="#mods">Mods</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="https://github.com/NebulaCoop/nebula-coop">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">A fork of <a href="https://github.com/keepvaibin/nebula">Nebula</a> by keepvaibin</p>
+        <h1>Super Mario Galaxy,<br>together, online.</h1>
+        <p class="lede">
+          NebulaCoop adds online multiplayer to Nebula, the native PC port of Super Mario Galaxy, in the spirit of
+          sm64coopdx. Several players share a galaxy, each with their own Mario or Luigi, over the internet, with no
+          port forwarding.
+        </p>
+        <div class="actions">
+          <a class="button primary" id="download"
+             href="https://github.com/NebulaCoop/nebula-coop/releases/latest/download/Nebula-Setup.exe">
+            Download for Windows
+          </a>
+          <a class="button" href="#play">How to join a room</a>
+        </div>
+        <p class="release" id="release">
+          <a href="https://github.com/NebulaCoop/nebula-coop/releases/latest">Latest release</a> · Windows 10 or 11, 64-bit
+        </p>
+        <p class="note">You need your own copy of the game. Not affiliated with or endorsed by Nintendo.</p>
+      </div>
+    </section>
+
+    <section class="credit-banner" aria-label="Built on Nebula">
+      <div class="wrap">
+        <p>
+          <strong>Built on Nebula.</strong> Everything that makes the game run on a PC (the host, the renderers, Setup,
+          controller and Wii Remote support, mods, achievements and the settings menu) is
+          <a href="https://github.com/keepvaibin/nebula">Nebula</a>'s, by
+          <a href="https://github.com/keepvaibin">keepvaibin</a>. NebulaCoop follows it closely and adds co-op on top.
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="wrap">
+        <h2>Playing together</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Rooms of 2 to 16</h3>
+            <p>One player hosts and the world runs on their PC. Everyone else joins with a room code.</p>
+          </article>
+          <article class="card">
+            <h3>No port forwarding</h3>
+            <p>Rooms go through NebulaNet, NebulaCoop's own CoopNet-style matchmaker. Direct <code>address:port</code> still works too.</p>
+          </article>
+          <article class="card">
+            <h3>Mario or Luigi</h3>
+            <p>Each player picks their character and can switch any time, with their own animations.</p>
+          </article>
+          <article class="card">
+            <h3>Per-mission instances</h3>
+            <p>You play with whoever is on the same galaxy and star. The galaxy and star selects show who is where.</p>
+          </article>
+          <article class="card">
+            <h3>A shared world</h3>
+            <p>Enemies, switches and boss fights are the room's. Coins and star bits are your own, but gone for everyone once taken.</p>
+          </article>
+          <article class="card">
+            <h3>Bubble on death</h3>
+            <p>Instead of losing a life, float in a bubble and fly to another player to get back in.</p>
+          </article>
+          <article class="card">
+            <h3>Chat and commands</h3>
+            <p>Chat, nametags, a player list, pop-ups, and <code>/kick</code>, <code>/ban</code> and <code>/moderator</code> for hosts.</p>
+          </article>
+          <article class="card">
+            <h3>The room's mods</h3>
+            <p>The host picks the mods. Joiners download any they're missing from the host as they join.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section alt">
+      <div class="wrap two">
+        <div>
+          <h2>Install</h2>
+          <ol class="steps">
+            <li>
+              Download <code>Nebula-Setup.exe</code> from the
+              <a href="https://github.com/NebulaCoop/nebula-coop/releases/latest">latest release</a>.
+              It isn't code-signed yet, so Windows SmartScreen says "Unknown publisher": choose
+              <strong>More info</strong>, then <strong>Run anyway</strong>.
+            </li>
+            <li>Select your copy of the game and choose <strong>Install</strong>. If Nebula is already installed, Setup can import its game and saves.</li>
+            <li>Start <strong>NebulaCoop</strong> from the Start menu.</li>
+          </ol>
+          <p>Run Setup again to update, repair or uninstall. Updates are signed, and Setup checks the signature before installing.</p>
+        </div>
+        <div>
+          <h2>Requirements</h2>
+          <ul class="reqs">
+            <li>Your own <strong>Super Mario Galaxy</strong> disc image (ISO, RVZ or extracted folder), revision 0: North America (RMGE01), Europe (RMGP01) or Japan (RMGJ01)</li>
+            <li>Windows 10 (1803 or newer) or Windows 11, 64-bit</li>
+            <li>A Direct3D 12 GPU and a CPU with AVX2</li>
+            <li>8 GB of RAM</li>
+            <li>An internet connection to play online</li>
+          </ul>
+          <p class="small">Everyone in a room needs the same NebulaCoop version and a supported disc.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="play" class="section">
+      <div class="wrap">
+        <h2>Join a room</h2>
+        <div class="grid three">
+          <article class="card step">
+            <span class="num" aria-hidden="true">1</span>
+            <h3>Set up your player</h3>
+            <p>Open <strong>Options › PLAYER</strong> and set your name and character.</p>
+          </article>
+          <article class="card step">
+            <span class="num" aria-hidden="true">2</span>
+            <h3>Host</h3>
+            <p>
+              Choose <strong>Host</strong>, pick or create a save, and leave NETWORK on <strong>NebulaNet</strong>.
+              Set LOBBY to <strong>Public</strong> to list the room for anyone, or keep it <strong>Friends only</strong>.
+              The room code shows in chat and on the ONLINE tab.
+            </p>
+          </article>
+          <article class="card step">
+            <span class="num" aria-hidden="true">3</span>
+            <h3>Join</h3>
+            <p>
+              Choose <strong>Join</strong> and enter the room code, or pick a room under ROOMS:
+              <strong>Public</strong> for everyone's public rooms, <strong>Private</strong> for rooms with the password you typed.
+            </p>
+          </article>
+        </div>
+        <p class="small center">
+          To leave, use the pause menu's <strong>Quit</strong>. Only the host's Quit saves the room's game.
+          Prefer a VPN or a forwarded port? Pick NETWORK <strong>Direct</strong> and share <code>address:port</code> (UDP 7777 by default).
+        </p>
+      </div>
+    </section>
+
+    <section id="mods" class="section alt">
+      <div class="wrap two">
+        <div>
+          <h2>Co-op mods</h2>
+          <p>
+            NebulaCoop runs Nebula's <code>.luma</code> mods, plus co-op mods packed as <code>.lumacoop</code>. Co-op mods
+            use LumaScript's <code>coop.*</code> calls, modeled on sm64coopdx's Lua API, to see who is in the room and
+            react as players join, leave and move between galaxies.
+          </p>
+          <p>
+            <a href="https://github.com/NebulaCoop/lumalink-coop">LumaLink Coop</a> converts mods and texture packs to
+            <code>.luma</code> and <code>.lumacoop</code> files.
+            The modding reference is in <a href="https://github.com/NebulaCoop/nebula-coop/blob/main/docs/modding/COOP.md">docs/modding</a>.
+          </p>
+        </div>
+        <div>
+          <h2>Built-in mods</h2>
+          <ul class="reqs">
+            <li><strong>Personal Star Counter</strong>: each player's stars this room and all time, from sm64coopdx. The host turns it on in Mods.</li>
+            <li><strong>Character Movesets</strong>: Luigi's own physics from Super Mario Galaxy, off by default so both characters play the same.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="credits" class="section">
+      <div class="wrap">
+        <h2>Credits</h2>
+        <ul class="credits">
+          <li>
+            <a href="https://github.com/keepvaibin/nebula"><strong>Nebula</strong></a>, by
+            <a href="https://github.com/keepvaibin">keepvaibin</a>. The PC port NebulaCoop is built on, and everything
+            that makes the game run on a PC. (<a href="https://discord.gg/2fJEdhAw2f">Nebula's Discord</a>)
+          </li>
+          <li>
+            <a href="https://github.com/coop-deluxe/sm64coopdx"><strong>sm64coopdx</strong></a> and its
+            <a href="https://github.com/coop-deluxe/coopnet">CoopNet</a>, the model for how co-op plays here: rooms,
+            instances, player interaction, the bubble on death, chat commands and the Personal Star Counter. Its design is
+            followed; its code is not used.
+          </li>
+          <li>
+            <a href="https://github.com/SMGCommunity/Petari"><strong>Petari</strong></a>, the Super Mario Galaxy
+            decompilation by SMGCommunity, the game code Nebula builds natively.
+          </li>
+          <li>
+            Other third-party code and its licenses are listed in
+            <a href="https://github.com/NebulaCoop/nebula-coop/blob/main/THIRD-PARTY-NOTICES.md">THIRD-PARTY-NOTICES.md</a>.
+          </li>
+        </ul>
+        <div class="links">
+          <a class="button" href="https://discord.gg/hNbgFtaRHv">NebulaCoop Discord</a>
+          <a class="button" href="https://github.com/NebulaCoop/nebula-coop/issues">Report a problem</a>
+          <a class="button" href="https://github.com/NebulaCoop/nebula-coop/blob/main/docs/BUILDING.md">Build from source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>
+        NebulaCoop, like Nebula, is licensed under the
+        <a href="https://github.com/NebulaCoop/nebula-coop/blob/main/LICENSE">GNU GPL v3.0</a>.
+        <a href="https://github.com/NebulaCoop/nebula-coop/blob/main/SECURITY.md">Security</a> ·
+        <a href="https://github.com/NebulaCoop/website">Website source</a>
+      </p>
+      <p>
+        "Super Mario Galaxy", "Wii" and "Nintendo" are trademarks of Nintendo. NebulaCoop is not affiliated with or
+        endorsed by Nintendo, and includes no game files: you need your own copy of the game.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
