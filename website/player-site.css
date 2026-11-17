@@ -776,16 +776,6 @@ kbd {
 .button:has(.discord-logo) {
   gap: 10px;
 }
-@media (any-hover: hover) and (any-pointer: fine) {
-  .star-cursor {
-    display: block;
-    z-index: 1000;
-  }
-  .custom-pointer-active,
-  .custom-pointer-active * {
-    cursor: none !important;
-  }
-}
 /* A short first step before the detailed v2 feature preview. */
 #available {
   padding: 30px 36px;

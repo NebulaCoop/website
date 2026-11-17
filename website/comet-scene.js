@@ -1,7 +1,8 @@
-// The home page's scene: a small planet of our own with every player's comet in orbit around it. Clicking the sky
-// launches another player, up to the 16 a room can hold. Everything here is drawn in code; there are no models
-// or textures from the game.
+// The home page's scene: Good Egg Galaxy's starting planet, turning slowly, with every player's comet in orbit
+// around it. Clicking the sky launches another player, up to the 16 a room can hold. The planet model comes from the
+// game (public/environment/garden/); until it loads, or if it can't, a small planet drawn in code stands in.
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { pageMessage } from './page-copy.js';
 
 const MAX_PLAYERS = 16;
@@ -207,6 +208,39 @@ world.add(planet);
 
   planet.rotation.set(0.28, 0, -0.12);
 }
+
+/* Good Egg Galaxy's starting planet. It replaces the stand-in once loaded and spins about its own axis. */
+const PLANET_SPIN = 0.08;
+const garden = new THREE.Group();
+garden.rotation.set(0.4, 0, -0.25);
+const gardenSpin = new THREE.Group();
+garden.add(gardenSpin);
+new GLTFLoader().load(
+  import.meta.env.BASE_URL + 'environment/garden/DiskGardenPlanet.glb',
+  (result) => {
+    const model = result.scene;
+    model.updateMatrixWorld(true);
+    const box = new THREE.Box3().setFromObject(model);
+    const size = box.getSize(new THREE.Vector3());
+    model.position.sub(box.getCenter(new THREE.Vector3()));
+    // About as wide as the stand-in, so the comets' orbits clear it.
+    gardenSpin.scale.setScalar((PLANET_RADIUS * 2.9) / Math.max(size.x, size.y, size.z));
+    model.traverse((child) => {
+      if (!child.isMesh) return;
+      for (const material of [].concat(child.material)) {
+        if (!material.map) continue;
+        material.map.colorSpace = THREE.SRGBColorSpace;
+        material.map.anisotropy = Math.min(4, renderer.capabilities.getMaxAnisotropy());
+      }
+    });
+    gardenSpin.add(model);
+    world.remove(planet);
+    world.add(garden);
+    if (!running) render();
+  },
+  undefined,
+  (error) => console.warn('The Good Egg planet could not load; keeping the drawn planet.', error),
+);
 
 const sun = new THREE.DirectionalLight('#fff4dc', 2.6);
 sun.position.set(-4, 5, 6);
@@ -424,6 +458,7 @@ function frame(now) {
   clock += delta;
   starMaterial.uniforms.time.value = clock;
   planet.rotation.y += delta * 0.12;
+  gardenSpin.rotation.y += delta * PLANET_SPIN;
   look.x += (look.tx - look.x) * 0.04;
   look.y += (look.ty - look.y) * 0.04;
   camera.position.x = look.x * 0.6;

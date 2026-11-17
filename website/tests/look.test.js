@@ -22,9 +22,14 @@ test('every page loads theme.css last among the shared styles', () => {
   }
 });
 
-test('the site uses no art, models or fonts taken from the game', () => {
+test('the only game model is the home page planet, and no game fonts are used', () => {
+  // Mackery chose Good Egg Galaxy's starting planet for the home page (2026-11-17). Nothing else from the game.
   const served = [...files(resolve(root, 'public')), ...files(resolve(root, 'assets'))];
-  for (const path of served) assert.doesNotMatch(path, /\.(glb|gltf|dae|bmd|bdl|arc)$/i, path);
+  const models = served.filter((path) => /\.(glb|gltf|dae|bmd|bdl|arc)$/i.test(path));
+  assert.deepEqual(
+    models.map((path) => path.slice(root.length + 1)),
+    ['public/environment/garden/DiskGardenPlanet.glb'],
+  );
   const sources = [
     ...templates,
     resolve(root, 'style.css'),
@@ -36,7 +41,7 @@ test('the site uses no art, models or fonts taken from the game', () => {
     resolve(root, 'scripts/render-docs.mjs'),
   ];
   for (const path of sources)
-    assert.doesNotMatch(readFileSync(path, 'utf8'), /Delfino|\/models\/|\/environment\//, path);
+    assert.doesNotMatch(readFileSync(path, 'utf8'), /Delfino|StarPiece|ForestHomePlanet/, path);
 });
 
 test('the home page has the comet scene and no Star Bit game', () => {
