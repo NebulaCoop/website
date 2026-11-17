@@ -1,0 +1,44 @@
+name: Site problem
+description: A page on nebula.mackery.com is broken, looks wrong, or doesn't work on your device.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is for the website only. Problems with the game go to
+        [nebula-coop](https://github.com/NebulaCoop/nebula-coop/issues/new/choose).
+  - type: input
+    id: url
+    attributes:
+      label: Page
+      placeholder: https://nebula.mackery.com/coop/
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What's wrong?
+      description: What you saw, and what you expected. A screenshot helps a lot.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Firefox 140 on Windows 11 / Safari on iPhone 15
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Light or dark mode?
+      options:
+        - Light
+        - Dark
+        - Both / doesn't matter
+  - type: textarea
+    id: console
+    attributes:
+      label: Browser console errors
+      description: If you know how, open the developer tools (F12) and copy any red errors.
+      render: text

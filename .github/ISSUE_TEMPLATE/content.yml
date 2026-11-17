@@ -1,0 +1,23 @@
+name: Wrong or missing information
+description: Something on the site or in the modding docs is wrong, outdated, unclear or missing.
+labels: ["documentation"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page
+      placeholder: https://nebula.mackery.com/modding/docs/coop/
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong or missing?
+      description: Quote the text if it's wrong, and say what it should say if you know.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: How do you know?
+      description: For example the game's behaviour, a release, or the code (link it).
