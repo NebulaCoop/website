@@ -33,12 +33,14 @@ header.writeUInt16LE(32, 12);
 header.writeUInt32LE(image.length, 14);
 header.writeUInt32LE(22, 18);
 await writeFile(resolve(root, 'public/favicon.ico'), Buffer.concat([header, image]));
-// The cursor: the game's menu hand pointer (assets/brand/hand-pointer.png), put together from the textures and
+// The cursor: the game's menu hand pointer (assets/brand/hand-pointer.png) and its grip (hand-grip.png), put together from the textures and
 // colours in the game's LayoutData/DPDPointer.arc. 36px tall; its hotspot is the point the game aims with, near the
 // tip of the index finger, which theme.css and docs.css name.
 await mkdir(resolve(root, 'public/cursor'), { recursive: true });
-const hand = sharp(await readFile(resolve(root, 'assets/brand/hand-pointer.png'))).resize({
-  height: 36,
-});
-await writeFile(resolve(root, 'public/cursor/hand-pointer.png'), await hand.png().toBuffer());
+for (const name of ['hand-pointer', 'hand-grip']) {
+  const hand = sharp(await readFile(resolve(root, `assets/brand/${name}.png`))).resize({
+    height: 36,
+  });
+  await writeFile(resolve(root, `public/cursor/${name}.png`), await hand.png().toBuffer());
+}
 console.log('Icons and cursors written to public/.');

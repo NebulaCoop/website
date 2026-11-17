@@ -1,3 +1,4 @@
+import './hand-cursor.js';
 import { pageMessage } from './page-copy.js';
 import { fetchDownloadStats, fetchRepoStars } from './download-stats.js';
 const downloadCount = document.querySelector('[data-download-count]');

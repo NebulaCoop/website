@@ -1,4 +1,5 @@
 /** Modding docs: sidebar drawer, search, copy buttons and the "On this page" highlight. */
+import './hand-cursor.js';
 const sidebar = document.getElementById('docs-sidebar');
 const openers = document.querySelectorAll('.docs-menu-toggle');
 const setDrawer = (open) => {
