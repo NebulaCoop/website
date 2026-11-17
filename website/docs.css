@@ -23,13 +23,16 @@
   --text: 'Nunito Variable', 'Segoe UI', Arial, sans-serif;
   --mono: Consolas, 'SFMono-Regular', Menlo, monospace;
 }
-/* The site's star pointer cursor, as in theme.css. */
+/* The site's hand pointer cursor, as in theme.css. */
 html {
-  --star-cursor: url('/cursor/star-pointer.svg') 16 16, url('/cursor/star-pointer.png') 16 16, auto;
-  --star-cursor-hover:
-    url('/cursor/star-pointer-hover.svg') 16 16, url('/cursor/star-pointer-hover.png') 16 16,
-    pointer;
+  --star-cursor: url('/cursor/hand-pointer.png') 8 4, auto;
+  --star-cursor-hover: url('/cursor/hand-pointer.png') 8 4, pointer;
   cursor: var(--star-cursor);
+}
+/* While a mouse button is held the hand grips (hand-cursor.js). */
+html.hand-grip {
+  --star-cursor: url('/cursor/hand-grip.png') 8 4, auto;
+  --star-cursor-hover: url('/cursor/hand-grip.png') 8 4, pointer;
 }
 a,
 button,

@@ -86,5 +86,6 @@ their colours, type, buttons and panels. `docs.css` and `blog.css` use the same 
 
 The planet (`public/environment/garden/`: `DiskGardenPlanet.glb` and its WebP textures) is the game's own model,
 as on Nebula's website, from [The Models Resource](https://models.spriters-resource.com/wii/supermariogalaxy/). It
-belongs to Nintendo. Nothing else on the site comes from the game. Nebula and NebulaCoop are not affiliated with
+belongs to Nintendo. So does the cursor, the game's menu hand pointer (`assets/brand/hand-pointer.png`, put together
+from the textures and colours in the game's `LayoutData/DPDPointer.arc`; `npm run icons` sizes it into `public/cursor/`). Nothing else on the site comes from the game. Nebula and NebulaCoop are not affiliated with
 Nintendo.
