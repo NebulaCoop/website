@@ -5,9 +5,9 @@
     "copy": "content/pages/home.json"
   },
   {
-    "path": "v2/",
-    "template": "templates/pages/v2.html",
-    "copy": "content/pages/v2.json"
+    "path": "coop/",
+    "template": "templates/pages/coop.html",
+    "copy": "content/pages/coop.json"
   },
   {
     "path": "download/",
@@ -33,6 +33,11 @@
     "path": "play/controls/",
     "template": "templates/pages/play-controls.html",
     "copy": "content/pages/play-controls.json"
+  },
+  {
+    "path": "play/online/",
+    "template": "templates/pages/play-online.html",
+    "copy": "content/pages/play-online.json"
   },
   {
     "path": "play/mods/",

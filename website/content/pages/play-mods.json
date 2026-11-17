@@ -1,7 +1,7 @@
 {
   "page": "/play/mods/",
   "metadata": {
-    "title": "Mods & texture packs — Nebula",
+    "title": "Mods & texture packs — NebulaCoop",
     "description": "Supported mods, installation and troubleshooting."
   },
   "text": {
@@ -9,12 +9,12 @@
       "link_1": "Skip to content"
     },
     "header": {
-      "aria_label_1": "Nebula home",
-      "link_1": "nebula",
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
       "button_1": "Menu",
       "label_2": "☰",
       "aria_label_2": "Main navigation",
-      "link_2": "v2",
+      "link_2": "Co-op",
       "link_3": "Setup",
       "link_4": "Player guide",
       "link_5": "Modding",
@@ -23,7 +23,7 @@
       "link_7": "Download"
     },
     "page": {
-      "link_1": "Nebula /",
+      "link_1": "NebulaCoop /",
       "paragraph_1": "PLAYER INFORMATION",
       "title_1": "Mods & texture packs",
       "paragraph_2": "Supported mods, installation and troubleshooting."
@@ -33,32 +33,33 @@
       "link_1": "COMPATIBILITY",
       "link_2": "IMPORT",
       "link_3": "TEXTURES & MOVIES",
-      "link_4": "TROUBLESHOOTING"
+      "link_4": "TROUBLESHOOTING",
+      "link_5": "IN A ROOM"
     },
     "supported": {
       "div_1": "COMPATIBILITY",
       "heading_1": "Supported mods",
-      "paragraph_1": ".luma mods, Riivolution packs, disc file replacements, Dolphin texture packs and replacement movies.",
-      "paragraph_2": "Wii code patches cannot run in a native game, and Nebula lists them at import.",
+      "paragraph_1": ".luma mods, .lumacoop co-op mods, Riivolution packs, disc file replacements, Dolphin texture packs and replacement movies.",
+      "paragraph_2": "Wii code patches cannot run in a native game, and NebulaCoop lists them at import.",
       "link_1": "Modding docs →",
-      "link_2": "LumaLink",
-      "paragraph_3": "converts a Wii mod to a .luma file and lists what it cannot use."
+      "link_2": "LumaLink Coop",
+      "paragraph_3": "converts a Wii mod to a .luma or .lumacoop file and lists what it cannot use."
     },
     "import": {
       "div_1": "IMPORT",
       "heading_1": "Installation",
       "label_1": "01",
       "subheading_1": "Open Mods",
-      "paragraph_1": "Open Settings, then the MODS page.",
+      "paragraph_1": "Open Options, then the MODS page. It imports and removes mods.",
       "label_2": "02",
       "subheading_2": "Import",
       "paragraph_2": "Choose Import file or Import folder, or drop the mod on the game window. Archives can be .zip, .7z, .rar or .tar, without a password.",
       "label_3": "03",
-      "subheading_3": "Load order",
-      "paragraph_3": "Move the mod to the list on the right. When two mods change the same file, the higher one wins.",
+      "subheading_3": "Pick them for the room",
+      "paragraph_3": "When you host, choose the room’s mods on the Host page. When two mods change the same file, the higher one wins.",
       "label_4": "04",
-      "subheading_4": "Apply",
-      "paragraph_4": "Choose the mod’s options, then Apply and restart Nebula."
+      "subheading_4": "Play",
+      "paragraph_4": "Choose the mod’s options, then host. Players who join get the room’s mods."
     },
     "packs": {
       "div_1": "TEXTURES & MOVIES",
@@ -69,18 +70,18 @@
     "mod-help": {
       "div_1": "TROUBLESHOOTING",
       "heading_1": "Troubleshooting",
-      "paragraph_1": "Turn the mods off on the MODS page (on Windows, you can also hold Shift while Nebula starts). If the problem stops, turn the mods on one at a time. Error codes NEB-M01, NEB-M02 and NEB-M03 name the mod or file involved.",
+      "paragraph_1": "Turn the mods off on the MODS page (on Windows, you can also hold Shift while NebulaCoop starts). If the problem stops, turn the mods on one at a time. Error codes NEB-M01, NEB-M02 and NEB-M03 name the mod or file involved.",
       "link_1": "Report a problem"
     },
     "footer": {
-      "link_1": "nebula",
-      "paragraph_1": "A little closer to the stars.",
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
       "subheading_1": "Explore",
-      "link_2": "Nebula v2",
+      "link_2": "Co-op",
       "link_3": "Player guide",
       "subheading_2": "Start playing",
       "link_4": "Modding docs",
-      "link_15": "Developer Blog",
+      "link_15": "Blog",
       "link_5": "Download",
       "link_6": "Setup & requirements",
       "link_7": "Controls",
@@ -88,11 +89,20 @@
       "link_8": "Troubleshooting",
       "link_9": "Report a bug",
       "link_10": "Join Discord ↗",
-      "subheading_4": "Nebula",
+      "subheading_4": "NebulaCoop",
       "link_12": "Credits",
       "link_13": "Legal & privacy",
       "link_14": "GitHub ↗",
-      "paragraph_2": "© 2026 keepvaibin. Nebula is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. Nebula is not affiliated with Nintendo."
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
+    },
+    "coop": {
+      "div_1": "IN A ROOM",
+      "heading_1": "Mods in a room",
+      "paragraph_1": "Mods are the room’s: the host picks them, and joiners download any they don’t have from the host. The mods are checked as each player joins, so everyone plays the same game.",
+      "paragraph_2": "Co-op mods are packed as .lumacoop. They can see who is in the room, add characters and set players’ colours. Plain Nebula refuses them. NebulaCoop comes with two built-in mods:",
+      "item_1": "Personal Star Counter, from sm64coopdx: each player’s stars this room and all time. Off by default; the host turns it on.",
+      "item_2": "Character Movesets: Luigi’s own moves from Super Mario Galaxy. Off by default, so every character plays like Mario.",
+      "link_1": "Making co-op mods →"
     }
   },
   "messages": {

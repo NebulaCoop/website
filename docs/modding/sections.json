@@ -1,13 +1,51 @@
 {
   "groups": [
-    { "id": "learn", "title": "Learn" },
-    { "id": "reference", "title": "Reference", "landing": "reference/index.md" }
+    {
+      "id": "learn",
+      "title": "Learn"
+    },
+    {
+      "id": "coop",
+      "title": "Co-op"
+    },
+    {
+      "id": "reference",
+      "title": "Reference",
+      "landing": "reference/index.md"
+    }
   ],
   "sections": [
-    { "id": "get-started", "group": "learn", "dir": "get-started", "icon": "✦" },
-    { "id": "concepts", "group": "learn", "dir": "concepts", "icon": "◎" },
-    { "id": "how-tos", "group": "learn", "dir": "how-tos", "icon": "✓" },
-    { "id": "tutorials", "group": "learn", "dir": "tutorials", "icon": "★" },
+    {
+      "id": "get-started",
+      "group": "learn",
+      "dir": "get-started",
+      "icon": "✦"
+    },
+    {
+      "id": "concepts",
+      "group": "learn",
+      "dir": "concepts",
+      "icon": "◎"
+    },
+    {
+      "id": "how-tos",
+      "group": "learn",
+      "dir": "how-tos",
+      "icon": "✓"
+    },
+    {
+      "id": "tutorials",
+      "group": "learn",
+      "dir": "tutorials",
+      "icon": "★"
+    },
+    {
+      "id": "coop",
+      "group": "coop",
+      "dir": "coop",
+      "shortTitle": "Co-op",
+      "icon": "⇄"
+    },
     {
       "id": "lumascript",
       "group": "reference",

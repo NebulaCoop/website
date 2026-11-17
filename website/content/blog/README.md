@@ -4,7 +4,7 @@ Every post on the Developer Blog (`/blog/`) is a Markdown file in this folder. T
 
 ## Add a post
 
-1. Create a folder in `content/blog/` named after the post's address, in lower-case letters, numbers and hyphens. The folder `content/blog/nebula-v2/` becomes `https://nebula.keepvaibin.com/blog/nebula-v2/`. Keep the name once a post is published, so links to it keep working.
+1. Create a folder in `content/blog/` named after the post's address, in lower-case letters, numbers and hyphens. The folder `content/blog/welcome/` becomes `https://nebula.mackery.com/blog/welcome/`. Keep the name once a post is published, so links to it keep working.
 2. In the folder, create `index.md` with front matter and the post's text:
 
    ```markdown
@@ -12,7 +12,7 @@ Every post on the Developer Blog (`/blog/`) is a Markdown file in this folder. T
    title: My new post
    date: 2026-11-20
    summary: One or two sentences for the blog index, search results and link previews.
-   author: keepvaibin
+   author: NebulaCoop
    ---
 
    The first paragraph of the post.
@@ -24,7 +24,7 @@ Every post on the Developer Blog (`/blog/`) is a Markdown file in this folder. T
 
 ```text
 content/blog/
-  nebula-v2/
+  welcome/
     index.md
   my-new-post/
     index.md
@@ -86,13 +86,13 @@ The post uses the site's fonts throughout. Other HTML is shown as plain text.
 
 Any word or phrase can be a link:
 
-| To                         | Write                                              |
-| -------------------------- | -------------------------------------------------- |
-| Another post               | `[read the v2 post](../nebula-v2/)`                |
-| A page on the site         | `[mods guide](/play/mods/)`                        |
-| A page in the modding docs | `[quickstart](/modding/docs/get-started/quickstart/)`      |
-| A heading in the same post | `[see the tables](#tables)`                        |
-| Another website            | `[Petari](https://github.com/SMGCommunity/Petari)` |
+| To                         | Write                                                 |
+| -------------------------- | ----------------------------------------------------- |
+| Another post               | `[read the welcome post](../welcome/)`                |
+| A page on the site         | `[mods guide](/play/mods/)`                           |
+| A page in the modding docs | `[quickstart](/modding/docs/get-started/quickstart/)` |
+| A heading in the same post | `[see the tables](#tables)`                           |
+| Another website            | `[Petari](https://github.com/SMGCommunity/Petari)`    |
 
 Write site pages from the site root, starting with `/`. The build turns them into addresses that work on GitHub Pages and checks that the page exists. A heading's anchor is its text in lower case, with punctuation removed and spaces replaced by hyphens.
 

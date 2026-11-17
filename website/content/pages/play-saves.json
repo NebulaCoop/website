@@ -1,20 +1,20 @@
 {
   "page": "/play/saves/",
   "metadata": {
-    "title": "Saves & Miis — Nebula",
-    "description": "Backups, save import and Mii icons."
+    "title": "Saves — NebulaCoop",
+    "description": "Backups, save import and where NebulaCoop keeps saves."
   },
   "text": {
     "general": {
       "link_1": "Skip to content"
     },
     "header": {
-      "aria_label_1": "Nebula home",
-      "link_1": "nebula",
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
       "button_1": "Menu",
       "label_2": "☰",
       "aria_label_2": "Main navigation",
-      "link_2": "v2",
+      "link_2": "Co-op",
       "link_3": "Setup",
       "link_4": "Player guide",
       "link_5": "Modding",
@@ -23,17 +23,16 @@
       "link_7": "Download"
     },
     "page": {
-      "link_1": "Nebula /",
+      "link_1": "NebulaCoop /",
       "paragraph_1": "PLAYER INFORMATION",
-      "title_1": "Saves & Miis",
-      "paragraph_2": "Backups, save import and Mii icons."
+      "title_1": "Saves",
+      "paragraph_2": "Backups, save import and where saves are kept."
     },
     "contents": {
       "aria_label_1": "On this page",
       "link_1": "BACK UP",
       "link_2": "IMPORT",
-      "link_3": "SAVE FILES",
-      "link_4": "MII ICONS"
+      "link_3": "SAVE FILES"
     },
     "backup": {
       "div_1": "BACK UP",
@@ -47,37 +46,29 @@
       "subheading_1": "Find your save",
       "paragraph_1": "In Dolphin, right-click Super Mario Galaxy and choose Open Wii Save Folder.",
       "label_2": "02",
-      "subheading_2": "Import in Nebula",
+      "subheading_2": "Import in NebulaCoop",
       "paragraph_2": "Open Settings, then the GENERAL page. Choose Import saves and select GameData.bin in that folder.",
       "label_3": "03",
       "subheading_3": "Replace and restart",
-      "paragraph_3": "Choose Replace. Nebula moves your current save to a dated backup folder and restarts with the imported one.",
-      "paragraph_4": "Import saves also reads Wii SD card saves (data.bin), Switch saves (GameData.bin), Nebula.sav files and Nebula ZIP backups. Action Replay saves (.wii) cannot be read."
+      "paragraph_3": "Choose Replace. NebulaCoop moves your current save to a dated backup folder and restarts with the imported one.",
+      "paragraph_4": "Import saves also reads Wii SD card saves (data.bin), Switch saves (GameData.bin), Nebula.sav files and Nebula ZIP backups. Action Replay saves (.wii) cannot be read. To bring over saves from an installed Nebula, NebulaCoop’s first install offers to import them."
     },
     "location": {
       "div_1": "SAVE FILES",
       "heading_1": "Save location",
-      "item_1": "Windows: %LOCALAPPDATA%\\Nebula\\saves",
-      "item_2": "Linux: ~/.local/share/Nebula/saves",
-      "item_3": "macOS: ~/Library/Application Support/Nebula/saves",
-      "item_4": "Android: inside the app. Use Export saves and Import saves.",
-      "paragraph_1": "Replaced saves move to a saves-backup-<date> folder beside the saves folder. Saves folder on the GENERAL page opens it.",
+      "item_1": "Windows: %LOCALAPPDATA%\\NebulaCoop\\saves",
+      "paragraph_1": "The saves you host rooms with are kept there too. Joiners play the host’s save, so their own saves are untouched. Replaced saves move to a saves-backup-<date> folder beside the saves folder, and Saves folder on the GENERAL page opens it.",
       "paragraph_2": "Export a backup before a major update or a move to another computer."
     },
-    "miis": {
-      "div_1": "MII ICONS",
-      "heading_1": "Mii icons",
-      "paragraph_1": "Import Miis on the GENERAL page adds Miis from a Wii, DS, 3DS, Wii U, Switch, Mii Studio or Mii Creator to the file icon list."
-    },
     "footer": {
-      "link_1": "nebula",
-      "paragraph_1": "A little closer to the stars.",
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
       "subheading_1": "Explore",
-      "link_2": "Nebula v2",
+      "link_2": "Co-op",
       "link_3": "Player guide",
       "subheading_2": "Start playing",
       "link_4": "Modding docs",
-      "link_15": "Developer Blog",
+      "link_15": "Blog",
       "link_5": "Download",
       "link_6": "Setup & requirements",
       "link_7": "Controls",
@@ -85,11 +76,11 @@
       "link_8": "Troubleshooting",
       "link_9": "Report a bug",
       "link_10": "Join Discord ↗",
-      "subheading_4": "Nebula",
+      "subheading_4": "NebulaCoop",
       "link_12": "Credits",
       "link_13": "Legal & privacy",
       "link_14": "GitHub ↗",
-      "paragraph_2": "© 2026 keepvaibin. Nebula is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. Nebula is not affiliated with Nintendo."
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
     }
   },
   "messages": {

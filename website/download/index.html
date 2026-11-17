@@ -7,40 +7,47 @@
     <link rel="icon" href="../favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="../favicon-32.png" />
     <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-    <title>Download Nebula</title>
-    <meta name="description" content="You need your own copy of Super Mario Galaxy." />
-    <meta property="og:title" content="Download Nebula" />
-    <meta property="og:description" content="You need your own copy of Super Mario Galaxy." />
+    <title>Download NebulaCoop</title>
+    <meta
+      name="description"
+      content="Get the latest NebulaCoop for Windows. You need your own copy of Super Mario Galaxy."
+    />
+    <meta property="og:title" content="Download NebulaCoop" />
+    <meta
+      property="og:description"
+      content="Get the latest NebulaCoop for Windows. You need your own copy of Super Mario Galaxy."
+    />
     <link rel="preload" href="../fonts/Delfino.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../reference-ui.css" />
     <link rel="stylesheet" href="../player-site.css" />
-    <link rel="canonical" href="https://nebula.keepvaibin.com/download/" />
-    <meta property="og:site_name" content="Nebula" />
+    <link rel="canonical" href="https://nebula.mackery.com/download/" />
+    <meta property="og:site_name" content="NebulaCoop" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nebula.keepvaibin.com/download/" />
-    <meta property="og:image" content="https://nebula.keepvaibin.com/icon-192.png" />
+    <meta property="og:url" content="https://nebula.mackery.com/download/" />
+    <meta property="og:image" content="https://nebula.mackery.com/icon-192.png" />
     <meta name="twitter:card" content="summary" />
   </head>
   <body class="inner-page">
     <a class="skip" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="../" aria-label="Nebula home"
-        ><img class="brand-logo" src="../brand-logo.png" alt="" width="34" height="34" /> nebula</a
+      <a class="brand" href="../" aria-label="NebulaCoop home"
+        ><img class="brand-logo" src="../brand-logo.png" alt="" width="34" height="34" /> nebula
+        co-op</a
       ><button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">
         Menu <span aria-hidden="true">☰</span>
       </button>
       <nav id="main-navigation" aria-label="Main navigation">
-        <a href="../v2/">v2</a><a href="../guide/">Setup</a><a href="../play/">Player guide</a
+        <a href="../coop/">Co-op</a><a href="../guide/">Setup</a><a href="../play/">Player guide</a
         ><a href="../modding/docs/">Modding</a><a href="../help/">Help</a><a href="../blog/">Blog</a
         ><a aria-current="page" href="../download/">Download</a>
       </nav>
     </header>
     <main id="main-content" class="inner-main">
       <div class="page-heading">
-        <a class="breadcrumb" href="../">Nebula /</a>
+        <a class="breadcrumb" href="../">NebulaCoop /</a>
         <p class="eyebrow">PLAYER INFORMATION</p>
-        <h1>Download Nebula</h1>
+        <h1>Download NebulaCoop</h1>
         <p>You need your own copy of Super Mario Galaxy.</p>
       </div>
       <nav class="page-toc" aria-label="On this page">
@@ -50,12 +57,21 @@
       <section class="content" id="current">
         <div class="section-label">LATEST RELEASE</div>
         <div class="section-body">
-          <h2>Nebula v1.0.2</h2>
-          <p>Nebula v1.0.2 for Windows, released 27 October 2026.</p>
-          <p>Download Nebula-Setup.exe under Assets on the release page.</p>
-          <a class="button primary" href="https://github.com/keepvaibin/nebula/releases/tag/v1.0.2"
-            >Download v1.0.2 ↗</a
-          ><a class="text-link" href="https://github.com/keepvaibin/nebula/releases"
+          <h2>NebulaCoop v<span data-latest-version>1.0.3</span></h2>
+          <p>
+            For Windows, released
+            <span data-latest-date>12 November 2026</span>.
+          </p>
+          <p>
+            The button downloads Nebula-Setup.exe, NebulaCoop’s Setup. It isn’t code-signed yet, so
+            Windows SmartScreen says “Unknown publisher”: choose More info, then Run anyway. Updates
+            are signed, and Setup checks the signature before installing.
+          </p>
+          <a
+            class="button primary"
+            href="https://github.com/NebulaCoop/nebula-coop/releases/latest/download/Nebula-Setup.exe"
+            >Download Setup ↓</a
+          ><a class="text-link" href="https://github.com/NebulaCoop/nebula-coop/releases"
             >All releases ↗</a
           >
         </div>
@@ -66,35 +82,32 @@
           <h2>Platforms</h2>
           <div class="platform-grid">
             <article>
-              <span class="status-pill available">v1.0.2 · v2</span>
+              <span class="status-pill available">Available</span>
               <h3>Windows</h3>
-              <p>
-                Windows 10 (1803 or newer) or Windows 11, 64-bit. Windows on ARM runs the x64
-                version.
-              </p>
+              <p>Windows 10 (1803 or newer) or Windows 11, 64-bit.</p>
             </article>
             <article>
-              <span class="status-pill available">v2</span>
+              <span class="status-pill">Not yet</span>
               <h3>Linux</h3>
               <p>
-                x64 and ARM64, including Steam Deck. Needs glibc 2.38 or newer, for example Ubuntu
-                24.04 or Fedora 39. Installs from the .tar.gz package with install.sh.
+                Nebula runs on Linux, including Steam Deck. NebulaCoop’s Linux build is not ready
+                yet.
               </p>
             </article>
             <article>
-              <span class="status-pill available">v2</span>
+              <span class="status-pill">Not yet</span>
               <h3>macOS</h3>
-              <p>macOS 12 or newer, on Apple silicon and Intel Macs.</p>
+              <p>Nebula runs on macOS. NebulaCoop’s macOS build is not ready yet.</p>
             </article>
             <article>
-              <span class="status-pill available">v2</span>
+              <span class="status-pill">Not yet</span>
               <h3>Android</h3>
-              <p>Android 12 or newer, 64-bit ARM, Vulkan 1.1. Touch controls and controllers.</p>
+              <p>Nebula runs on Android. NebulaCoop’s Android build is not ready yet.</p>
             </article>
             <article>
-              <span class="status-pill">In development</span>
+              <span class="status-pill">Not yet</span>
               <h3>iPhone and iPad</h3>
-              <p>An iPhone and iPad version is in development.</p>
+              <p>An iPhone and iPad version of Nebula is in development.</p>
             </article>
           </div>
         </div>
@@ -104,8 +117,9 @@
         <div class="section-body">
           <h2>Game files</h2>
           <p>
-            Nebula includes no game files. You need Super Mario Galaxy for Wii, North America
-            (RMGE01), as an ISO, RVZ or extracted folder.
+            NebulaCoop includes no game files. You need Super Mario Galaxy for Wii, revision 0:
+            North America (RMGE01), Europe (RMGP01) or Japan (RMGJ01), as an ISO, RVZ or extracted
+            folder. Everyone in a room needs their own copy.
           </p>
           <a class="button primary" href="../guide/#before">System requirements</a>
         </div>
@@ -114,18 +128,18 @@
     <footer class="site-footer">
       <div class="footer-top">
         <a class="brand" href="../"
-          ><img class="brand-logo" src="../brand-logo.png" alt="" width="34" height="34" />
-          nebula</a
+          ><img class="brand-logo" src="../brand-logo.png" alt="" width="34" height="34" /> nebula
+          co-op</a
         >
-        <p>A little closer to the stars.</p>
+        <p>Co-op by @Mackery6969, built on Nebula by @keepvaibin</p>
       </div>
       <div class="footer-links">
         <div>
           <h3>Explore</h3>
-          <a class="text-link" href="../v2/">Nebula v2</a
+          <a class="text-link" href="../coop/">Co-op</a
           ><a class="text-link" href="../play/">Player guide</a
           ><a class="text-link" href="../modding/docs/">Modding docs</a
-          ><a class="text-link" href="../blog/">Developer Blog</a>
+          ><a class="text-link" href="../blog/">Blog</a>
         </div>
         <div>
           <h3>Start playing</h3>
@@ -137,18 +151,19 @@
           <h3>Get help</h3>
           <a class="text-link" href="../help/">Troubleshooting</a
           ><a class="text-link" href="../help/#report">Report a bug</a
-          ><a class="text-link" href="https://discord.gg/2fJEdhAw2f">Join Discord ↗</a>
+          ><a class="text-link" href="https://discord.gg/hNbgFtaRHv">Join Discord ↗</a>
         </div>
         <div>
-          <h3>Nebula</h3>
+          <h3>NebulaCoop</h3>
           <a class="text-link" href="../credits/">Credits</a
           ><a class="text-link" href="../legal/">Legal &amp; privacy</a
-          ><a class="text-link" href="https://github.com/keepvaibin/nebula">GitHub ↗</a>
+          ><a class="text-link" href="https://github.com/NebulaCoop/nebula-coop">GitHub ↗</a>
         </div>
       </div>
       <p class="legal-line">
-        © 2026 keepvaibin. Nebula is free software under the GNU GPL v3. Super Mario Galaxy, Wii and
-        Nintendo are trademarks of Nintendo. Nebula is not affiliated with Nintendo.
+        © 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL
+        v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not
+        affiliated with Nintendo.
       </p>
     </footer>
     <script type="module" src="../site.js"></script>

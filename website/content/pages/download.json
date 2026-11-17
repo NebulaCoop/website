@@ -1,20 +1,20 @@
 {
   "page": "/download/",
   "metadata": {
-    "title": "Download Nebula",
-    "description": "You need your own copy of Super Mario Galaxy."
+    "title": "Download NebulaCoop",
+    "description": "Get the latest NebulaCoop for Windows. You need your own copy of Super Mario Galaxy."
   },
   "text": {
     "general": {
       "link_1": "Skip to content"
     },
     "header": {
-      "aria_label_1": "Nebula home",
-      "link_1": "nebula",
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
       "button_1": "Menu",
       "label_2": "☰",
       "aria_label_2": "Main navigation",
-      "link_2": "v2",
+      "link_2": "Co-op",
       "link_3": "Setup",
       "link_4": "Player guide",
       "link_5": "Modding",
@@ -23,9 +23,9 @@
       "link_7": "Download"
     },
     "page": {
-      "link_1": "Nebula /",
+      "link_1": "NebulaCoop /",
       "paragraph_1": "PLAYER INFORMATION",
-      "title_1": "Download Nebula",
+      "title_1": "Download NebulaCoop",
       "paragraph_2": "You need your own copy of Super Mario Galaxy."
     },
     "contents": {
@@ -36,46 +36,47 @@
     },
     "current": {
       "div_1": "LATEST RELEASE",
-      "heading_1": "Nebula v1.0.2",
-      "paragraph_1": "Nebula v1.0.2 for Windows, released 27 October 2026.",
-      "paragraph_2": "Download Nebula-Setup.exe under Assets on the release page.",
-      "link_1": "Download v1.0.2 ↗",
-      "link_2": "All releases ↗"
+      "heading_1": "NebulaCoop v",
+      "paragraph_1": "For Windows, released",
+      "paragraph_2": "The button downloads Nebula-Setup.exe, NebulaCoop’s Setup. It isn’t code-signed yet, so Windows SmartScreen says “Unknown publisher”: choose More info, then Run anyway. Updates are signed, and Setup checks the signature before installing.",
+      "link_1": "Download Setup ↓",
+      "link_2": "All releases ↗",
+      "end_1": "."
     },
     "platforms": {
       "div_1": "PLATFORMS",
       "heading_1": "Platforms",
-      "label_1": "v1.0.2 · v2",
+      "label_1": "Available",
       "subheading_1": "Windows",
-      "paragraph_1": "Windows 10 (1803 or newer) or Windows 11, 64-bit. Windows on ARM runs the x64 version.",
-      "label_2": "v2",
+      "paragraph_1": "Windows 10 (1803 or newer) or Windows 11, 64-bit.",
+      "label_2": "Not yet",
       "subheading_2": "Linux",
-      "paragraph_2": "x64 and ARM64, including Steam Deck. Needs glibc 2.38 or newer, for example Ubuntu 24.04 or Fedora 39. Installs from the .tar.gz package with install.sh.",
-      "label_3": "v2",
+      "paragraph_2": "Nebula runs on Linux, including Steam Deck. NebulaCoop’s Linux build is not ready yet.",
+      "label_3": "Not yet",
       "subheading_3": "macOS",
-      "paragraph_3": "macOS 12 or newer, on Apple silicon and Intel Macs.",
-      "label_4": "v2",
+      "paragraph_3": "Nebula runs on macOS. NebulaCoop’s macOS build is not ready yet.",
+      "label_4": "Not yet",
       "subheading_4": "Android",
-      "paragraph_4": "Android 12 or newer, 64-bit ARM, Vulkan 1.1. Touch controls and controllers.",
-      "label_5": "In development",
+      "paragraph_4": "Nebula runs on Android. NebulaCoop’s Android build is not ready yet.",
+      "label_5": "Not yet",
       "subheading_5": "iPhone and iPad",
-      "paragraph_5": "An iPhone and iPad version is in development."
+      "paragraph_5": "An iPhone and iPad version of Nebula is in development."
     },
     "before": {
       "div_1": "YOUR GAME",
       "heading_1": "Game files",
-      "paragraph_1": "Nebula includes no game files. You need Super Mario Galaxy for Wii, North America (RMGE01), as an ISO, RVZ or extracted folder.",
+      "paragraph_1": "NebulaCoop includes no game files. You need Super Mario Galaxy for Wii, revision 0: North America (RMGE01), Europe (RMGP01) or Japan (RMGJ01), as an ISO, RVZ or extracted folder. Everyone in a room needs their own copy.",
       "link_1": "System requirements"
     },
     "footer": {
-      "link_1": "nebula",
-      "paragraph_1": "A little closer to the stars.",
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
       "subheading_1": "Explore",
-      "link_2": "Nebula v2",
+      "link_2": "Co-op",
       "link_3": "Player guide",
       "subheading_2": "Start playing",
       "link_4": "Modding docs",
-      "link_15": "Developer Blog",
+      "link_15": "Blog",
       "link_5": "Download",
       "link_6": "Setup & requirements",
       "link_7": "Controls",
@@ -83,11 +84,11 @@
       "link_8": "Troubleshooting",
       "link_9": "Report a bug",
       "link_10": "Join Discord ↗",
-      "subheading_4": "Nebula",
+      "subheading_4": "NebulaCoop",
       "link_12": "Credits",
       "link_13": "Legal & privacy",
       "link_14": "GitHub ↗",
-      "paragraph_2": "© 2026 keepvaibin. Nebula is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. Nebula is not affiliated with Nintendo."
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
     }
   },
   "messages": {

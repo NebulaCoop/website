@@ -1,20 +1,20 @@
 {
   "page": "/legal/",
   "metadata": {
-    "title": "Legal & privacy — Nebula",
-    "description": "Licensing, game ownership and optional online features."
+    "title": "Legal & privacy — NebulaCoop",
+    "description": "Licensing, game ownership, online play and privacy."
   },
   "text": {
     "general": {
       "link_1": "Skip to content"
     },
     "header": {
-      "aria_label_1": "Nebula home",
-      "link_1": "nebula",
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
       "button_1": "Menu",
       "label_2": "☰",
       "aria_label_2": "Main navigation",
-      "link_2": "v2",
+      "link_2": "Co-op",
       "link_3": "Setup",
       "link_4": "Player guide",
       "link_5": "Modding",
@@ -23,10 +23,10 @@
       "link_7": "Download"
     },
     "page": {
-      "link_1": "Nebula /",
+      "link_1": "NebulaCoop /",
       "paragraph_1": "PLAYER INFORMATION",
       "title_1": "Legal & privacy",
-      "paragraph_2": "Licensing, game ownership and optional online features."
+      "paragraph_2": "Licensing, game ownership, online play and privacy."
     },
     "contents": {
       "aria_label_1": "On this page",
@@ -37,32 +37,32 @@
     "licence": {
       "div_1": "LICENSE",
       "heading_1": "Free software",
-      "paragraph_1": "Nebula is licensed under the GNU General Public License v3.0 only. Petari is licensed under CC0 1.0. Other components keep their own licenses.",
-      "link_1": "Nebula license ↗"
+      "paragraph_1": "NebulaCoop, like Nebula, is licensed under the GNU General Public License v3.0 only. Petari is licensed under CC0 1.0. Other components keep their own licenses. This website is a remix of Nebula’s website, under the same license.",
+      "link_1": "NebulaCoop license ↗"
     },
     "your-game": {
       "div_1": "YOUR COPY",
       "heading_1": "Game files",
-      "paragraph_1": "Nebula does not distribute Nintendo game files or disc images. Setup prepares the game from your own copy.",
-      "paragraph_2": "Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. Nebula is not affiliated with, endorsed by or sponsored by Nintendo. Other product names and trademarks belong to their respective owners."
+      "paragraph_1": "NebulaCoop does not distribute Nintendo game files or disc images. Setup prepares the game from your own copy, and everyone who plays needs their own.",
+      "paragraph_2": "Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with, endorsed by or sponsored by Nintendo. Other product names and trademarks belong to their respective owners."
     },
     "privacy": {
       "div_1": "PRIVACY",
       "heading_1": "Privacy",
-      "paragraph_1": "Nebula checks GitHub for new releases when it starts; Check at start on the SYSTEM page turns this off. DLSS and XeSS download from NVIDIA and Intel only when you choose them. Discord status connects only to the Discord app on your computer. Mods ask permission before using the internet, your files, the camera or the microphone.",
-      "paragraph_2": "Crash reports and diagnostics recordings stay on your computer unless you attach them to a report.",
-      "paragraph_3": "This website has no analytics or accounts. Your browser reads the download count from GitHub. External sites such as GitHub and Discord have their own privacy policies.",
-      "paragraph_4": "After a benchmark, Nebula can send its results if you choose Send. The report holds your graphics card, processor, memory, system version, settings and the benchmark’s measurements, and is encrypted so only keepvaibin can read it. You can add the end of the game log, with names and paths removed. It never holds your user or computer name, file paths, serial numbers, saves, Miis or mods. The server uses your IP address only to limit how often one address can send, and does not store it. Reports are deleted after 180 days."
+      "paragraph_1": "NebulaCoop checks its GitHub releases for updates when it starts; Check at start on the SYSTEM page turns this off. DLSS and XeSS download from NVIDIA and Intel only when you choose them. Discord status connects only to the Discord app on your computer.",
+      "paragraph_2": "Online play: the players in a room see your name, character and colours, and connect to your computer’s address. With NebulaNet, your game asks Cloudflare’s STUN server for its public address, and the NebulaNet server keeps a room’s name, code, settings and the host’s addresses while it is open, so players can find it, plus hourly counts of rooms and players. It has no accounts. Bans and moderators are kept by IP address on the host’s computer.",
+      "paragraph_3": "Crash reports and diagnostics recordings stay on your computer unless you attach them to a report. This website has no analytics or accounts. Your browser reads the release and download counts from GitHub. External sites such as GitHub and Discord have their own privacy policies.",
+      "paragraph_4": "Mods ask permission before using the internet, your files, the camera or the microphone."
     },
     "footer": {
-      "link_1": "nebula",
-      "paragraph_1": "A little closer to the stars.",
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
       "subheading_1": "Explore",
-      "link_2": "Nebula v2",
+      "link_2": "Co-op",
       "link_3": "Player guide",
       "subheading_2": "Start playing",
       "link_4": "Modding docs",
-      "link_15": "Developer Blog",
+      "link_15": "Blog",
       "link_5": "Download",
       "link_6": "Setup & requirements",
       "link_7": "Controls",
@@ -70,11 +70,11 @@
       "link_8": "Troubleshooting",
       "link_9": "Report a bug",
       "link_10": "Join Discord ↗",
-      "subheading_4": "Nebula",
+      "subheading_4": "NebulaCoop",
       "link_12": "Credits",
       "link_13": "Legal & privacy",
       "link_14": "GitHub ↗",
-      "paragraph_2": "© 2026 keepvaibin. Nebula is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. Nebula is not affiliated with Nintendo."
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
     }
   },
   "messages": {

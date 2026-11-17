@@ -38,8 +38,9 @@
         {{text.header.button_1}} <span aria-hidden="true">{{text.header.label_2}}</span>
       </button>
       <nav id="main-navigation" aria-label="{{text.header.aria_label_2}}">
-        <a href="./v2/">{{text.header.link_2}}</a><a href="./guide/">{{text.header.link_3}}</a
-        ><a href="./play/">{{text.header.link_4}}</a><a href="./modding/docs/">{{text.header.link_5}}</a
+        <a href="./coop/">{{text.header.link_2}}</a><a href="./guide/">{{text.header.link_3}}</a
+        ><a href="./play/">{{text.header.link_4}}</a
+        ><a href="./modding/docs/">{{text.header.link_5}}</a
         ><a href="./help/">{{text.header.link_6}}</a><a href="./blog/">{{text.header.link_8}}</a
         ><a href="./download/">{{text.header.link_7}}</a>
       </nav>
@@ -49,12 +50,13 @@
         <div class="eyebrow"><span></span> {{text.hero.eyebrow}}</div>
         <h1 id="title">
           <span class="title-text">{{text.hero.title}}</span
-          ><span class="title-star" aria-hidden="true">{{text.hero.label_2}}</span>
+          ><span class="title-star" aria-hidden="true">{{text.hero.label_2}}</span
+          ><span class="title-coop"> {{text.hero.coop_tag}}</span>
         </h1>
         <p class="tagline">{{text.hero.tagline}}</p>
         <p class="intro">{{text.hero.intro}}</p>
         <div class="actions">
-          <a class="button primary" href="./v2/">{{text.hero.v2_button}}</a
+          <a class="button primary" href="./coop/">{{text.hero.coop_button}}</a
           ><a class="button secondary" href="./download/">{{text.hero.download_button}}</a>
         </div>
         <a class="hero-guide" href="./guide/">{{text.hero.setup_link}}</a>
@@ -86,58 +88,86 @@
       <section class="content" id="available">
         <div class="section-label">{{text.available.div_1}}</div>
         <div class="section-body">
-          <h2>{{text.available.heading_1}}</h2>
-          <p class="release-summary">{{text.available.paragraph_1}}</p>
+          <h2>
+            {{text.available.heading_1}}<span data-latest-version>{{downloads.version}}</span>
+          </h2>
+          <p class="release-summary">
+            {{text.available.paragraph_1}}
+            <span data-latest-date>{{downloads.date}}</span>{{text.available.end_1}}
+          </p>
           <div class="release-actions">
             <a
               class="button primary"
-              href="https://github.com/keepvaibin/nebula/releases/tag/v1.0.2"
+              href="https://github.com/NebulaCoop/nebula-coop/releases/latest"
               >{{text.available.link_1}}</a
             ><a class="release-help" href="./guide/">{{text.available.link_2}}</a>
           </div>
         </div>
       </section>
-      <section class="content" id="v2">
-        <div class="section-label">{{text.v2.div_1}}</div>
+      <section class="content" id="about">
+        <div class="section-label">{{text.about.div_1}}</div>
         <div class="section-body">
-          <h2>{{text.v2.heading_1}}</h2>
-          <p>{{text.v2.paragraph_1}}</p>
+          <h2>{{text.about.heading_1}}</h2>
+          <p>{{text.about.paragraph_1}}</p>
           <div class="player-grid">
-            <a class="player-card" href="./play/graphics/"
-              ><span class="card-label">{{text.v2.label_1}}</span>
-              <h3>{{text.v2.subheading_1}} <span aria-hidden="true">{{text.v2.label_2}}</span></h3>
-              <p>{{text.v2.paragraph_3}}</p></a
-            ><a class="player-card" href="./play/graphics/#smoothness"
-              ><span class="card-label">{{text.v2.label_3}}</span>
-              <h3>{{text.v2.subheading_2}} <span aria-hidden="true">{{text.v2.label_4}}</span></h3>
-              <p>{{text.v2.paragraph_4}}</p></a
-            ><a class="player-card" href="./play/graphics/#resolution"
-              ><span class="card-label">{{text.v2.label_5}}</span>
-              <h3>{{text.v2.subheading_3}} <span aria-hidden="true">{{text.v2.label_6}}</span></h3>
-              <p>{{text.v2.paragraph_5}}</p></a
-            ><a class="player-card" href="./play/controls/"
-              ><span class="card-label">{{text.v2.label_7}}</span>
-              <h3>{{text.v2.subheading_4}} <span aria-hidden="true">{{text.v2.label_8}}</span></h3>
-              <p>{{text.v2.paragraph_6}}</p></a
-            ><a class="player-card" href="./v2/#comforts"
-              ><span class="card-label">{{text.v2.label_9}}</span>
-              <h3>{{text.v2.subheading_5}} <span aria-hidden="true">{{text.v2.label_10}}</span></h3>
-              <p>{{text.v2.paragraph_7}}</p></a
-            ><a class="player-card" href="./play/mods/"
-              ><span class="card-label">{{text.v2.label_11}}</span>
-              <h3>{{text.v2.subheading_6}} <span aria-hidden="true">{{text.v2.label_12}}</span></h3>
-              <p>{{text.v2.paragraph_8}}</p></a
-            ><a class="player-card" href="./v2/#achievements"
-              ><span class="card-label">{{text.v2.label_13}}</span>
-              <h3>{{text.v2.subheading_7}} <span aria-hidden="true">{{text.v2.label_14}}</span></h3>
-              <p>{{text.v2.paragraph_9}}</p></a
-            ><a class="player-card" href="./play/saves/"
-              ><span class="card-label">{{text.v2.label_15}}</span>
-              <h3>{{text.v2.subheading_8}} <span aria-hidden="true">{{text.v2.label_16}}</span></h3>
-              <p>{{text.v2.paragraph_10}}</p></a
+            <a class="player-card" href="./play/online/"
+              ><span class="card-label">{{text.about.label_1}}</span>
+              <h3>
+                {{text.about.subheading_1}} <span aria-hidden="true">{{text.about.label_2}}</span>
+              </h3>
+              <p>{{text.about.paragraph_3}}</p></a
+            ><a class="player-card" href="./coop/#players"
+              ><span class="card-label">{{text.about.label_3}}</span>
+              <h3>
+                {{text.about.subheading_2}} <span aria-hidden="true">{{text.about.label_4}}</span>
+              </h3>
+              <p>{{text.about.paragraph_4}}</p></a
+            ><a class="player-card" href="./coop/#rooms"
+              ><span class="card-label">{{text.about.label_5}}</span>
+              <h3>
+                {{text.about.subheading_3}} <span aria-hidden="true">{{text.about.label_6}}</span>
+              </h3>
+              <p>{{text.about.paragraph_5}}</p></a
+            ><a class="player-card" href="./coop/#world"
+              ><span class="card-label">{{text.about.label_7}}</span>
+              <h3>
+                {{text.about.subheading_4}} <span aria-hidden="true">{{text.about.label_8}}</span>
+              </h3>
+              <p>{{text.about.paragraph_6}}</p></a
+            ><a class="player-card" href="./coop/#options"
+              ><span class="card-label">{{text.about.label_9}}</span>
+              <h3>
+                {{text.about.subheading_5}} <span aria-hidden="true">{{text.about.label_10}}</span>
+              </h3>
+              <p>{{text.about.paragraph_7}}</p></a
+            ><a class="player-card" href="./play/online/#chat"
+              ><span class="card-label">{{text.about.label_11}}</span>
+              <h3>
+                {{text.about.subheading_6}} <span aria-hidden="true">{{text.about.label_12}}</span>
+              </h3>
+              <p>{{text.about.paragraph_8}}</p></a
+            ><a class="player-card" href="./modding/docs/coop/"
+              ><span class="card-label">{{text.about.label_13}}</span>
+              <h3>
+                {{text.about.subheading_7}} <span aria-hidden="true">{{text.about.label_14}}</span>
+              </h3>
+              <p>{{text.about.paragraph_9}}</p></a
+            ><a class="player-card" href="./coop/#nebula"
+              ><span class="card-label">{{text.about.label_15}}</span>
+              <h3>
+                {{text.about.subheading_8}} <span aria-hidden="true">{{text.about.label_16}}</span>
+              </h3>
+              <p>{{text.about.paragraph_10}}</p></a
             >
           </div>
-          <a class="button primary" href="./v2/">{{text.v2.link_1}}</a>
+          <a class="button primary" href="./coop/">{{text.about.link_1}}</a>
+          <p class="built-on">
+            {{text.about.built_on_1}}
+            <a class="text-link" href="https://nebula.keepvaibin.com/"
+              >{{text.about.built_on_link}}</a
+            >
+            {{text.about.built_on_2}}
+          </p>
         </div>
       </section>
       <section class="content" id="start">
@@ -169,7 +199,7 @@
           </ol>
           <div class="actions">
             <a class="button primary" href="./guide/">{{text.start.link_1}}</a
-            ><a class="button secondary" href="./download/">{{text.start.link_2}}</a>
+            ><a class="button secondary" href="./play/online/">{{text.start.link_2}}</a>
           </div>
         </div>
       </section>
@@ -179,7 +209,7 @@
           <h2>{{text.community.heading_1}}</h2>
           <p>{{text.community.paragraph_1}}</p>
           <div class="actions">
-            <a class="button primary" href="https://discord.gg/2fJEdhAw2f"
+            <a class="button primary" href="https://discord.gg/hNbgFtaRHv"
               ><svg class="discord-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path
                   fill="currentColor"
@@ -241,7 +271,7 @@
       <div class="footer-links">
         <div>
           <h3>{{text.footer.subheading_1}}</h3>
-          <a class="text-link" href="./v2/">{{text.footer.link_2}}</a
+          <a class="text-link" href="./coop/">{{text.footer.link_2}}</a
           ><a class="text-link" href="./play/">{{text.footer.link_3}}</a
           ><a class="text-link" href="./modding/docs/">{{text.footer.link_4}}</a
           ><a class="text-link" href="./blog/">{{text.footer.link_15}}</a>
@@ -256,13 +286,13 @@
           <h3>{{text.footer.subheading_3}}</h3>
           <a class="text-link" href="./help/">{{text.footer.link_8}}</a
           ><a class="text-link" href="./help/#report">{{text.footer.link_9}}</a
-          ><a class="text-link" href="https://discord.gg/2fJEdhAw2f">{{text.footer.link_10}}</a>
+          ><a class="text-link" href="https://discord.gg/hNbgFtaRHv">{{text.footer.link_10}}</a>
         </div>
         <div>
           <h3>{{text.footer.subheading_4}}</h3>
           <a class="text-link" href="./credits/">{{text.footer.link_12}}</a
           ><a class="text-link" href="./legal/">{{text.footer.link_13}}</a
-          ><a class="text-link" href="https://github.com/keepvaibin/nebula"
+          ><a class="text-link" href="https://github.com/NebulaCoop/nebula-coop"
             >{{text.footer.link_14}}</a
           >
         </div>

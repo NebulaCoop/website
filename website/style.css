@@ -600,3 +600,32 @@ footer p {
     display: none;
   }
 }
+
+/* NebulaCoop: the CO-OP tag under the wordmark. Absolutely placed, so the title's box (which the Star Bits'
+   word formation maps onto) keeps NEBULA's size. */
+.title-coop {
+  position: absolute;
+  right: -6px;
+  bottom: -0.42em;
+  font-family: Delfino, 'Space Grotesk', sans-serif;
+  font-size: clamp(22px, 3vw, 40px);
+  letter-spacing: 2px;
+  color: #ffe39a;
+  -webkit-text-stroke: 0;
+  text-shadow:
+    0 3px 0 #9a5b14,
+    0 0 22px #ffcf67aa;
+  transform: rotate(-6deg);
+  white-space: nowrap;
+}
+.built-on {
+  margin: 22px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+@media (max-width: 700px) {
+  .title-coop {
+    right: 0;
+    bottom: -0.55em;
+  }
+}

@@ -1,8 +1,12 @@
-# Nebula website
+# NebulaCoop website
 
-The source of [nebula.keepvaibin.com](https://nebula.keepvaibin.com/): the player site (home page, v2, download,
-setup guide, player guide, help, credits, legal), the developer blog at `/blog/` and the modding documentation
-at `/modding/docs/`. It is a static site built with [Vite](https://vite.dev/); nothing runs on a server.
+The source of [nebula.mackery.com](https://nebula.mackery.com/): the player site (home page, co-op, download,
+setup guide, player guide with playing online, help, credits, legal), the blog at `/blog/` and the modding
+documentation at `/modding/docs/`, with its Co-op section. It is a static site built with [Vite](https://vite.dev/);
+nothing runs on a server.
+
+It is a remix of [Nebula's website](https://nebula.keepvaibin.com/) by keepvaibin (`website/` in
+[keepvaibin/nebula](https://github.com/keepvaibin/nebula)), GPL-3.0 like Nebula.
 
 ## Run it locally
 
@@ -45,9 +49,21 @@ template, post or Markdown instead, then run `npm run content` (the dev server a
 
 ## Publishing
 
-`.github/workflows/website.yml` at the repository root builds and publishes the site to GitHub Pages whenever a
-change under `website/` or `docs/modding/` reaches `main`. It can also be run by hand from the Actions tab. See
-the comments at the top of that file for the one-time setup and for publishing from a branch instead.
+Cloudflare Workers Builds builds `main` and publishes `dist/` to nebula.mackery.com, as a Worker with static assets
+only (`wrangler.jsonc`). Static asset requests are free and unlimited on the Workers Free plan. One-time setup, in the
+Cloudflare dashboard of the account that holds mackery.com:
+
+1. **Workers & Pages > Create > Import a repository**, and pick `NebulaCoop/website`.
+2. **Root directory**: `website`. **Build command**: `npm run build`. **Deploy command**: `npx wrangler deploy`.
+3. Optional: a build variable `GITHUB_TOKEN` (a token with no scopes is enough) lifts GitHub's rate limit for the
+   release and download count the build reads.
+
+The first deploy creates the `nebula.mackery.com` custom domain and its DNS record. To deploy by hand instead:
+`npx wrangler login`, then `npm run deploy`. `npm run cf:preview` serves the build through Wrangler locally, with
+`public/_headers` and the 404 page as Cloudflare serves them.
+
+`.github/workflows/website.yml` at the repository root runs the tests, the build, Prettier and a Wrangler dry run on
+every pull request and push; it publishes nothing.
 
 ## Home page assets
 

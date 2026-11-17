@@ -1,3 +1,6 @@
+// NebulaCoop's releases. The site reads them in the build (content/downloads.json) and again in the browser.
+export const REPOSITORY = 'NebulaCoop/nebula-coop';
+
 // In the build, a GitHub token (GITHUB_TOKEN, which GitHub Actions provides) lifts the API's rate limit.
 // Browsers never have one.
 function githubHeaders() {
@@ -9,10 +12,11 @@ function githubHeaders() {
 
 export async function fetchDownloadStats(fetcher = fetch) {
   let total = 0,
-    releases = 0;
+    releases = 0,
+    latest = null;
   for (let page = 1; ; page++) {
     const response = await fetcher(
-      `https://api.github.com/repos/keepvaibin/nebula/releases?per_page=100&page=${page}`,
+      `https://api.github.com/repos/${REPOSITORY}/releases?per_page=100&page=${page}`,
       {
         headers: githubHeaders(),
         signal: AbortSignal.timeout(10000),
@@ -24,6 +28,13 @@ export async function fetchDownloadStats(fetcher = fetch) {
     for (const release of batch) {
       if (release.draft) continue;
       releases++;
+      // The newest published full release: what the download buttons offer.
+      if (
+        !release.prerelease &&
+        typeof release.tag_name === 'string' &&
+        (!latest || release.published_at > latest.published)
+      )
+        latest = { version: release.tag_name.replace(/^v/, ''), published: release.published_at };
       for (const asset of release.assets || []) {
         if (!Number.isSafeInteger(asset.download_count) || asset.download_count < 0)
           throw new Error('Invalid download count');
@@ -32,11 +43,11 @@ export async function fetchDownloadStats(fetcher = fetch) {
     }
     if (batch.length < 100) break;
   }
-  return { total, releases, checkedAt: new Date().toISOString() };
+  return { total, releases, ...(latest ? { latest } : {}), checkedAt: new Date().toISOString() };
 }
 
 export async function fetchRepoStars(fetcher = fetch) {
-  const response = await fetcher('https://api.github.com/repos/keepvaibin/nebula', {
+  const response = await fetcher(`https://api.github.com/repos/${REPOSITORY}`, {
     headers: githubHeaders(),
     signal: AbortSignal.timeout(10000),
   });

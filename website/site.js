@@ -31,9 +31,12 @@ window.addEventListener('pointerout', (event) => {
 });
 window.addEventListener('blur', hideCustomCursor);
 const downloadCount = document.querySelector('[data-download-count]');
-if (downloadCount) {
+// The release version and date the build saw; newer ones replace them here.
+const latestVersions = document.querySelectorAll('[data-latest-version]');
+const latestDates = document.querySelectorAll('[data-latest-date]');
+if (downloadCount || latestVersions.length || latestDates.length) {
   const loadStats = async () => {
-    const cacheKey = 'nebula-download-stats';
+    const cacheKey = 'nebulacoop-download-stats';
     try {
       const cached = JSON.parse(sessionStorage.getItem(cacheKey));
       if (cached && Number.isSafeInteger(cached.total) && Date.now() - cached.savedAt < 900000)
@@ -51,14 +54,26 @@ if (downloadCount) {
   };
   loadStats()
     .then((stats) => {
-      downloadCount.textContent = stats.total.toLocaleString('en-US');
-      downloadCount.title = pageMessage('downloadCountTitle', { releases: stats.releases });
+      if (downloadCount) {
+        downloadCount.textContent = stats.total.toLocaleString('en-US');
+        downloadCount.title = pageMessage('downloadCountTitle', { releases: stats.releases });
+      }
+      if (stats.latest?.version)
+        for (const element of latestVersions) element.textContent = stats.latest.version;
+      if (stats.latest?.published)
+        for (const element of latestDates)
+          element.textContent = new Date(stats.latest.published).toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC',
+          });
     })
     .catch(() => {}); // Keep the build-time count if GitHub is unavailable or rate-limited.
 }
 const starCount = document.querySelector('[data-star-count]');
 if (starCount) {
-  const cacheKey = 'nebula-star-count';
+  const cacheKey = 'nebulacoop-star-count';
   let cached;
   try {
     cached = JSON.parse(sessionStorage.getItem(cacheKey));

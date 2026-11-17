@@ -48,14 +48,14 @@ test('the sample post renders every supported kind of content', () => {
     /<video class="post-video" controls[^>]*><source src="sample-video\.mp4" type="video\/mp4"/,
   );
   assert.match(html, /<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/aGvhnf7gfMI"/);
-  assert.match(html, /<a href="\.\.\/nebula-v2\/">/);
+  assert.match(html, /<a href="\.\.\/welcome\/">/);
   assert.match(html, /<a href="\.\.\/\.\.\/play\/mods\/">/);
   assert.match(html, /<span class="text-large">larger text<\/span>/);
   assert.ok(withDrafts.media.has('blog/sample-post/sample-video.mp4'));
 });
 
 test('unsafe HTML in a post is shown as text', () => {
-  const html = withDrafts.files.get('blog/nebula-v2/index.html');
+  const html = withDrafts.files.get('blog/welcome/index.html');
   assert.doesNotMatch(html, /<script>(?!location)/);
 });
 

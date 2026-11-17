@@ -74,9 +74,28 @@ test('player pages exclude draft instructions and developer-only navigation', ()
 test('all twenty-one error codes and current download links remain present', () => {
   const errors = documents.get(resolve(root, 'help/error-codes/index.html'));
   assert.equal((errors.match(/class="error-entry"/g) || []).length, 21);
+  const download = documents.get(resolve(root, 'download/index.html'));
+  assert.match(download, /NebulaCoop v<span data-latest-version(="")?>\d+\.\d+\.\d+<\/span>/);
   assert.match(
-    documents.get(resolve(root, 'download/index.html')),
-    /Nebula v1\.0\.2 for Windows, released 27 October 2026\./,
+    download,
+    /https:\/\/github.com\/NebulaCoop\/nebula-coop\/releases\/latest\/download\/Nebula-Setup\.exe/,
   );
-  assert.match(documents.get(resolve(root, 'index.html')), /https:\/\/discord.gg\/2fJEdhAw2f/);
+  const home = documents.get(resolve(root, 'index.html'));
+  assert.match(home, /https:\/\/discord.gg\/hNbgFtaRHv/);
+});
+
+test('Nebula is credited first, and links go to NebulaCoop rather than upstream', () => {
+  const credits = documents.get(resolve(root, 'credits/index.html'));
+  assert.ok(
+    credits.indexOf('Nebula, by keepvaibin') < credits.indexOf('sm64coopdx and CoopNet'),
+    'Nebula comes first in the credits',
+  );
+  assert.match(
+    documents.get(resolve(root, 'index.html')),
+    /href="https:\/\/nebula.keepvaibin.com\/"/,
+  );
+  for (const [file, html] of documents) {
+    // Upstream's issue tracker and releases are not where NebulaCoop players should go.
+    assert.doesNotMatch(html, /github.com\/keepvaibin\/nebula\/(issues|releases)/, file);
+  }
 });

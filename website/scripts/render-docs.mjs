@@ -834,7 +834,9 @@ export function buildDocs() {
   const real = [...files.keys()].map((file) => file.slice(0, -'index.html'.length));
   for (const [from, to] of redirects(real)) {
     if (!files.has(`${to}index.html`))
-      problems.push(`redirects.json: ${from.slice(DOCS.length)} points at missing ${to.slice(DOCS.length)}`);
+      problems.push(
+        `redirects.json: ${from.slice(DOCS.length)} points at missing ${to.slice(DOCS.length)}`,
+      );
     files.set(`${from}index.html`, renderRedirect(site, from, to));
   }
 

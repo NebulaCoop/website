@@ -68,8 +68,6 @@ async function writeSiteFiles(routes) {
     resolve(root, 'public/robots.txt'),
     `User-agent: *\nAllow: /\n\nSitemap: ${pageUrl('sitemap.xml')}\n`,
   );
-  // GitHub Pages reads the custom domain from this file when the site is deployed from a branch.
-  await writeFile(resolve(root, 'public/CNAME'), `${new URL(site.url).hostname}\n`);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
