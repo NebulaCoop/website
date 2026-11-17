@@ -62,7 +62,7 @@
       "div_1": "NEBULA",
       "heading_1": "Nebula, by keepvaibin",
       "p_1": "NebulaCoop is a fork of Nebula, the native PC port of Super Mario Galaxy, by keepvaibin. Everything that makes the game run on a PC is Nebula’s: the host, the renderers, Setup and the launcher, controller and Wii Remote support, mods, LumaScript and LumaLink, achievements and the settings menu. NebulaCoop follows Nebula closely and brings in its changes regularly.",
-      "p_2": "This website started from Nebula’s own website: its pages, how it is built and its modding documentation. Its look, logo and home page scene are NebulaCoop’s own.",
+      "p_2": "This website started from Nebula’s own website: its pages, how it is built and its modding documentation. Its look and logo are NebulaCoop’s own.",
       "link_1": "Nebula’s website ↗",
       "link_2": "Nebula on GitHub ↗",
       "link_3": "Nebula’s Discord ↗"
@@ -93,7 +93,7 @@
       "link_1": "Third-party notices ↗",
       "p_2": "Website: the Fredoka and Nunito fonts are used under the",
       "link_2": "SIL Open Font License",
-      "p_3": ". The planet, the comets and the logo are drawn for this site."
+      "p_3": ". The home page’s Good Egg planet is the game’s own model and textures, from The Models Resource, and belongs to Nintendo; the comets and the logo are drawn for this site."
     }
   },
   "messages": {

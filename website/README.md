@@ -44,7 +44,7 @@ the preview. Other commands:
 | `style.css`, `player-site.css`, `theme.css`, `blog.css`, `docs.css` | Styles                                                                     |
 | `comet-scene.js`                                                    | The home page's 3D scene: the planet and the players' comets               |
 | `site.js`, `docs.js`                                                | Menus, help search and download counts; the docs sidebar and search        |
-| `public/`                                                           | Files served as they are: icons, robots.txt, headers                       |
+| `public/`                                                           | Files served as they are: icons, the home page planet, robots.txt, headers |
 
 The `index.html` files beside the templates, and the `blog/` and `docs/` folders, are generated. Edit the text,
 template, post or Markdown instead, then run `npm run content` (the dev server and the build do this for you).
@@ -80,8 +80,11 @@ their colours, type, buttons and panels. `docs.css` and `blog.css` use the same 
   [Nunito](https://fonts.google.com/specimen/Nunito) for reading, both bundled from Fontsource (SIL Open Font
   License).
 - Logo: `assets/brand/nebulacoop-mark.svg`. `npm run icons` renders the favicons and `brand-logo.png` from it.
-- Home page: `comet-scene.js` draws a small planet with an observatory and one comet per player, all in code.
-  Clicking the sky launches another player, up to 16. Only the home page loads Three.js.
+- Home page: `comet-scene.js` shows Good Egg Galaxy's starting planet turning slowly, with one comet per player
+  in orbit. Clicking the sky launches another player, up to 16. Only the home page loads Three.js. Until the
+  planet loads, or if it can't, a small planet drawn in code stands in.
 
-Nothing on the site uses art, models, textures or fonts from the game. Nebula and NebulaCoop are not affiliated with
+The planet (`public/environment/garden/`: `DiskGardenPlanet.glb` and its WebP textures) is the game's own model,
+as on Nebula's website, from [The Models Resource](https://models.spriters-resource.com/wii/supermariogalaxy/). It
+belongs to Nintendo. Nothing else on the site comes from the game. Nebula and NebulaCoop are not affiliated with
 Nintendo.

@@ -1,35 +1,5 @@
 import { pageMessage } from './page-copy.js';
 import { fetchDownloadStats, fetchRepoStars } from './download-stats.js';
-let customCursor = document.querySelector('.star-cursor');
-if (!customCursor) {
-  customCursor = document.createElement('div');
-  customCursor.className = 'star-cursor';
-  customCursor.textContent = '✧';
-  customCursor.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(customCursor);
-}
-const hideCustomCursor = () => {
-  document.body.classList.remove('custom-pointer-active');
-  customCursor.style.opacity = '0';
-};
-window.addEventListener(
-  'pointermove',
-  (event) => {
-    if (event.pointerType !== 'mouse') {
-      hideCustomCursor();
-      return;
-    }
-    // A transform moves the cursor on the compositor; left/top would relayout on every move.
-    customCursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
-    customCursor.style.opacity = '1';
-    document.body.classList.add('custom-pointer-active');
-  },
-  { passive: true },
-);
-window.addEventListener('pointerout', (event) => {
-  if (!event.relatedTarget) hideCustomCursor();
-});
-window.addEventListener('blur', hideCustomCursor);
 const downloadCount = document.querySelector('[data-download-count]');
 // The release version and date the build saw; newer ones replace them here.
 const latestVersions = document.querySelectorAll('[data-latest-version]');
