@@ -1,0 +1,127 @@
+{
+  "page": "/guide/",
+  "metadata": {
+    "title": "Setup guide — NebulaCoop",
+    "description": "System requirements, installation, first settings and updates for NebulaCoop."
+  },
+  "text": {
+    "general": {
+      "link_1": "Skip to content"
+    },
+    "header": {
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
+      "button_1": "Menu",
+      "label_2": "☰",
+      "aria_label_2": "Main navigation",
+      "link_2": "Co-op",
+      "link_3": "Setup",
+      "link_4": "Player guide",
+      "link_5": "Modding",
+      "link_6": "Help",
+      "link_8": "Blog",
+      "link_7": "Download"
+    },
+    "page": {
+      "link_1": "NebulaCoop /",
+      "paragraph_1": "PLAYER INFORMATION",
+      "title_1": "Setup guide",
+      "paragraph_2": "System requirements, installation and first settings."
+    },
+    "contents": {
+      "aria_label_1": "On this page",
+      "link_1": "REQUIREMENTS",
+      "link_2": "INSTALL",
+      "link_3": "FIRST LAUNCH",
+      "link_4": "UPDATES"
+    },
+    "before": {
+      "div_1": "REQUIREMENTS",
+      "heading_1": "System requirements",
+      "paragraph_1": "Setup prepares the game from your own copy. NebulaCoop includes no game files.",
+      "aria_label_1": "Requirement reference",
+      "column_1": "Requirement",
+      "column_2": "NebulaCoop",
+      "row_1": "Operating system",
+      "cell_1": "Windows 10 (1803 or newer) or Windows 11, 64-bit",
+      "row_2": "Processor",
+      "cell_2": "x86-64 with AVX2",
+      "row_3": "Graphics",
+      "cell_3": "Direct3D 12 (Vulkan is also offered)",
+      "row_4": "Memory",
+      "cell_4": "8 GB RAM",
+      "row_5": "Storage",
+      "cell_5": "8 GB free for setup",
+      "row_6": "Your game",
+      "cell_6": "Super Mario Galaxy for Wii, revision 0: North America (RMGE01), Europe (RMGP01) or Japan (RMGJ01). Super Mario Galaxy 2 is not supported.",
+      "row_7": "Accepted formats",
+      "cell_7": "ISO, RVZ or an extracted game folder",
+      "paragraph_2": "Everyone in a room needs a supported disc and the same NebulaCoop version. To play online you also need an internet connection."
+    },
+    "install": {
+      "div_1": "INSTALL",
+      "heading_1": "Installation",
+      "label_1": "01",
+      "subheading_1": "Download Setup",
+      "paragraph_1": "Use the",
+      "link_1": "download page",
+      "paragraph_2": "to get Nebula-Setup.exe, NebulaCoop’s Setup.",
+      "label_2": "02",
+      "subheading_2": "Choose your game",
+      "paragraph_3": "Run Nebula-Setup.exe and select your game. Setup checks the disc and its revision. If Nebula is already installed, Setup offers to import its game and saves.",
+      "label_3": "03",
+      "subheading_3": "Install",
+      "paragraph_4": "Choose Install. Setup prepares the game and adds NebulaCoop to the Start menu, beside Nebula if you have it.",
+      "label_4": "04",
+      "subheading_4": "Play",
+      "paragraph_5": "Open NebulaCoop from the Start menu. Set your name and character on the PLAYER page, then Host or Join.",
+      "paragraph_6": "Download NebulaCoop only from its GitHub releases. It isn’t code-signed yet: if Windows shows “Windows protected your PC”, choose More info, then Run anyway."
+    },
+    "first-launch": {
+      "div_1": "FIRST LAUNCH",
+      "heading_1": "First settings",
+      "paragraph_1": "Open Options from the main menu, or press",
+      "kbd_1": "F1",
+      "paragraph_2": "in the game. On controllers, press View + Menu (Xbox, Steam), Share + Options (PlayStation) or Minus + Plus (Switch).",
+      "item_1": "On an older computer, start at a low internal resolution and raise it while the game stays smooth.",
+      "item_2": "Set Aspect ratio to Auto, and HUD resolution to Display for sharp menus and text.",
+      "item_3": "On a display faster than 60 Hz, turn on Interpolation and set the target frame rate.",
+      "item_4": "Set your name, character and colours on the PLAYER page before you go online.",
+      "item_5": "Choose Apply to keep changes, or Undo to discard them. Display changes revert after a countdown unless you keep them.",
+      "link_1": "Graphics and performance →"
+    },
+    "updates": {
+      "div_1": "UPDATES",
+      "heading_1": "Updates",
+      "paragraph_1": "NebulaCoop checks its GitHub releases for updates. The SYSTEM page has Check for updates, and Check at start turns the startup check off. Updates and uninstalling keep your saves and settings.",
+      "item_1": "Choose Update. NebulaCoop closes and Setup installs the new version, after checking its signature. Run Setup again to repair, restore the previous version or uninstall.",
+      "paragraph_2": "Before a major update, choose Export saves on the GENERAL page.",
+      "link_1": "Back up or import saves"
+    },
+    "footer": {
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
+      "subheading_1": "Explore",
+      "link_2": "Co-op",
+      "link_3": "Player guide",
+      "subheading_2": "Start playing",
+      "link_4": "Modding docs",
+      "link_15": "Blog",
+      "link_5": "Download",
+      "link_6": "Setup & requirements",
+      "link_7": "Controls",
+      "subheading_3": "Get help",
+      "link_8": "Troubleshooting",
+      "link_9": "Report a bug",
+      "link_10": "Join Discord ↗",
+      "subheading_4": "NebulaCoop",
+      "link_12": "Credits",
+      "link_13": "Legal & privacy",
+      "link_14": "GitHub ↗",
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
+    }
+  },
+  "messages": {
+    "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players."
+  }
+}

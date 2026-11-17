@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "NebulaCoop modding documentation",
+    "titleSuffix": " — NebulaCoop modding docs",
+    "description": "Make mods for NebulaCoop and Nebula: co-op calls and events, characters and colours, LumaScript, LumaKit, LumaCore services and LumaLink."
+  },
+  "header": {
+    "skip": "Skip to main content",
+    "brand": "nebula co-op",
+    "brandSub": "Modding docs",
+    "homeLink": "NebulaCoop home"
+  },
+  "docs": {
+    "home": "Modding docs",
+    "sidebarLabel": "Modding documentation",
+    "browse": "Open navigation",
+    "close": "Close navigation",
+    "searchLabel": "Search the modding docs",
+    "searchPlaceholder": "Search the docs",
+    "searchResults": "Search results",
+    "searchEmpty": "No results. Try a function, module, command or error code.",
+    "onThisPage": "In this article",
+    "previous": "Previous",
+    "next": "Next",
+    "pagerLabel": "Previous and next articles",
+    "copy": "Copy",
+    "copied": "Copied",
+    "sectionOverview": "Overview",
+    "viewAll": "View all {n} articles",
+    "downloadExample": "Download the finished mod",
+    "moved": "This page has moved.",
+    "movedLink": "Go to the new page",
+    "preview": "Installing mods?",
+    "previewText": "These docs are for making mods. They come from Nebula’s docs, with a Co-op section for NebulaCoop. To install mods made by others,",
+    "moreArticles": "More articles",
+    "articlesHeading": "Articles",
+    "sectionsHeading": "Sections"
+  },
+  "hub": {
+    "startSection": "get-started",
+    "startHeading": "Get started",
+    "startIntro": "Install LumaLink, then make, test and pack your first mod.",
+    "groups": {
+      "learn": {
+        "heading": "Learn",
+        "intro": "Understand how mods work, complete one task at a time, or build a complete mod step by step."
+      },
+      "coop": {
+        "heading": "Co-op",
+        "intro": "Make mods for online rooms: see who is in the room, add characters and set players’ colours."
+      },
+      "reference": {
+        "heading": "Reference",
+        "intro": "Look up the language, the library, the services, the command-line tool, mod files and the game's names.",
+        "more": "All reference sections"
+      }
+    },
+    "popularLabel": "Popular",
+    "popular": [
+      "coop/players-and-events.md",
+      "coop/characters.md",
+      "get-started/quickstart.md",
+      "reference/luma-json.md",
+      "reference/lumascript/hooks.md",
+      "reference/lumakit/hud.md"
+    ],
+    "playerTipLink": "see Using mods."
+  },
+  "footer": {
+    "legal": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
+  }
+}

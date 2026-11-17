@@ -1,0 +1,41 @@
+name: Website
+
+# Tests and builds the site (website/ and docs/modding/) on every pull request and push to main. Publishing is
+# Cloudflare Workers Builds' job: it builds main and deploys website/dist to nebula.mackery.com (website/README.md,
+# "Publishing"), so nothing is uploaded from here.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    name: Test and build
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+      - run: npm test
+      # The build reads the latest release and download count from GitHub; the token avoids its rate limit.
+      - run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - run: npx prettier --check .
+      - name: Check the Worker config
+        run: npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/worker"

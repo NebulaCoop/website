@@ -1,0 +1,149 @@
+{
+  "page": "/play/online/",
+  "metadata": {
+    "title": "Playing online — NebulaCoop",
+    "description": "Set up your player, host a room, join by room code, chat commands and connection help."
+  },
+  "text": {
+    "general": {
+      "link_1": "Skip to content"
+    },
+    "header": {
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
+      "button_1": "Menu",
+      "label_2": "☰",
+      "aria_label_2": "Main navigation",
+      "link_2": "Co-op",
+      "link_3": "Setup",
+      "link_4": "Player guide",
+      "link_5": "Modding",
+      "link_6": "Help",
+      "link_8": "Blog",
+      "link_7": "Download"
+    },
+    "footer": {
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
+      "subheading_1": "Explore",
+      "link_2": "Co-op",
+      "link_3": "Player guide",
+      "subheading_2": "Start playing",
+      "link_4": "Modding docs",
+      "link_15": "Blog",
+      "link_5": "Download",
+      "link_6": "Setup & requirements",
+      "link_7": "Controls",
+      "subheading_3": "Get help",
+      "link_8": "Troubleshooting",
+      "link_9": "Report a bug",
+      "link_10": "Join Discord ↗",
+      "subheading_4": "NebulaCoop",
+      "link_12": "Credits",
+      "link_13": "Legal & privacy",
+      "link_14": "GitHub ↗",
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
+    },
+    "page": {
+      "link_1": "NebulaCoop /",
+      "paragraph_1": "PLAYER GUIDE",
+      "title_1": "Playing online",
+      "paragraph_2": "Host a room, share its code, and play together."
+    },
+    "contents": {
+      "aria_label_1": "On this page",
+      "link_1": "YOUR PLAYER",
+      "link_2": "HOST",
+      "link_3": "JOIN",
+      "link_4": "DIRECT",
+      "link_5": "CHAT",
+      "link_6": "LEAVE",
+      "link_7": "HELP"
+    },
+    "player": {
+      "div_1": "YOUR PLAYER",
+      "heading_1": "Set up your player",
+      "p_1": "Open Options, then the PLAYER page, before you host or join.",
+      "item_1": "NAME: how other players see you. If someone in the room already has it, the host gives you “NAME (2)”.",
+      "item_2": "CHARACTER: Mario, Luigi or a character a running mod adds. You can switch during play.",
+      "item_3": "COLOURS: SET picks a whole set, and a row for each part changes one colour.",
+      "item_4": "Pop-ups: which corner messages you see when players join, leave, change galaxy, die or get a star."
+    },
+    "host": {
+      "div_1": "HOST",
+      "heading_1": "Host a room",
+      "step_1_label": "01",
+      "step_1_heading": "Choose Host",
+      "step_1": "On the main menu, choose Host, then pick a save or create one.",
+      "step_2_label": "02",
+      "step_2_heading": "Pick the network",
+      "step_2": "Leave NETWORK on NebulaNet to get a room code. Choose Direct to share your address and port instead.",
+      "step_3_label": "03",
+      "step_3_heading": "Pick who can join",
+      "step_3": "LOBBY Public lists the room for everyone. Friends only keeps it off the list. A password makes joining need it.",
+      "step_4_label": "04",
+      "step_4_heading": "Set the room",
+      "step_4": "Choose the player count, the mods and the room options, such as Bubble on Death and Player Interaction.",
+      "step_5_label": "05",
+      "step_5_heading": "Share the code",
+      "step_5": "Choose Host. The room code shows in your chat and on the ONLINE tab of the pause menu.",
+      "p_1": "The world runs on the host’s PC, so the host needs the steadiest connection. The host can change the room options at any time from the ONLINE tab."
+    },
+    "join": {
+      "div_1": "JOIN",
+      "heading_1": "Join a room",
+      "step_1_label": "01",
+      "step_1_heading": "Choose Join",
+      "step_1": "On the main menu, choose Join.",
+      "step_2_label": "02",
+      "step_2_heading": "Enter the room",
+      "step_2": "Type the room code, or the host’s address:port for a direct room. Or pick a room under ROOMS: Public for everyone’s public rooms, Private for the rooms with the password you typed.",
+      "step_3_label": "03",
+      "step_3_heading": "Get the room’s mods",
+      "step_3": "Mods you don’t have are downloaded from the host. Your own saves are untouched: you play the host’s save."
+    },
+    "direct": {
+      "div_1": "DIRECT",
+      "heading_1": "NebulaNet or Direct",
+      "p_1": "NebulaNet is NebulaCoop’s room-code service. It introduces the players, and then the game data goes between them directly, so nobody has to forward a port.",
+      "p_2": "Direct skips NebulaNet. The host shares their address and port (UDP 7777 by default) and needs that port forwarded, or everyone on the same VPN, such as Tailscale, ZeroTier or Radmin VPN."
+    },
+    "chat": {
+      "div_1": "CHAT",
+      "heading_1": "Chat and commands",
+      "p_1": "Press T to open a chat line and Enter to send it. Hold Tab (keyboard) or Share (controller) for the player list. Commands start with a slash, and Tab completes them.",
+      "card_1_label": "Everyone",
+      "card_1_heading": "/help and /players",
+      "card_1": "List the commands, and the players with their numbers.",
+      "card_2_label": "Host and moderators",
+      "card_2_heading": "/kick, /ban and /permban",
+      "card_2": "Remove a player, refuse them while this room is open, or refuse them in every room you host. Each asks first, and /confirm does it.",
+      "card_3_label": "Host",
+      "card_3_heading": "/moderator",
+      "card_3": "Lets a player kick and ban too, in every room you host.",
+      "card_4_label": "With Cheats on",
+      "card_4_heading": "/tp, /teleport and /pos",
+      "card_4": "Move yourself to another player, or show where you are. The host and moderators can move anyone."
+    },
+    "leave": {
+      "div_1": "LEAVE",
+      "heading_1": "Leaving a room",
+      "p_1": "Use the pause menu’s Quit. Only the host’s Quit saves the room’s game. When the host leaves, closes the game or loses their connection, everyone goes back to the main menu."
+    },
+    "trouble": {
+      "div_1": "HELP",
+      "heading_1": "Can’t connect?",
+      "item_1": "Everyone needs the same NebulaCoop version. Update with Setup if the game says yours is too old or too new.",
+      "item_2": "Everyone needs a supported disc: RMGE01, RMGP01 or RMGJ01, revision 0.",
+      "item_3": "For a friends-only room with a password, type the password exactly.",
+      "item_4": "For Direct, check the port is forwarded for UDP and allowed through the host’s firewall, or use a VPN.",
+      "item_5": "If a room code stops working, the host may have left. Ask them for the new code.",
+      "p_1": "Still stuck? Ask on the",
+      "link_1": "NebulaCoop Discord",
+      "p_2": "or see Help."
+    }
+  },
+  "messages": {
+    "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players."
+  }
+}

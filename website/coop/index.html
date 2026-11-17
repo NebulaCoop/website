@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050609" />
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="../favicon-32.png" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <title>Co-op — NebulaCoop</title>
+    <meta
+      name="description"
+      content="What NebulaCoop adds to Nebula: rooms and room codes, characters and colours, per-mission instances, a shared world, room options and chat."
+    />
+    <meta property="og:title" content="Co-op — NebulaCoop" />
+    <meta
+      property="og:description"
+      content="What NebulaCoop adds to Nebula: rooms and room codes, characters and colours, per-mission instances, a shared world, room options and chat."
+    />
+    <link rel="preload" href="../fonts/Delfino.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../reference-ui.css" />
+    <link rel="stylesheet" href="../player-site.css" />
+    <link rel="canonical" href="https://nebula.mackery.com/coop/" />
+    <meta property="og:site_name" content="NebulaCoop" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nebula.mackery.com/coop/" />
+    <meta property="og:image" content="https://nebula.mackery.com/icon-192.png" />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body class="inner-page">
+    <a class="skip" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="NebulaCoop home"
+        ><img class="brand-logo" src="../brand-logo.png" alt="" width="34" height="34" /> nebula
+        co-op</a
+      ><button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">
+        Menu <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a aria-current="page" href="../coop/">Co-op</a><a href="../guide/">Setup</a
+        ><a href="../play/">Player guide</a><a href="../modding/docs/">Modding</a
+        ><a href="../help/">Help</a><a href="../blog/">Blog</a><a href="../download/">Download</a>
+      </nav>
+    </header>
+    <main id="main-content" class="inner-main">
+      <div class="page-heading">
+        <a class="breadcrumb" href="../">NebulaCoop /</a>
+        <p class="eyebrow">NEBULACOOP</p>
+        <h1>What co-op adds</h1>
+        <p>Online multiplayer for Super Mario Galaxy, in the spirit of sm64coopdx.</p>
+      </div>
+      <nav class="page-toc" aria-label="On this page">
+        <a href="#rooms">ROOMS</a><a href="#players">PLAYERS</a><a href="#world">WORLD</a
+        ><a href="#options">ROOM OPTIONS</a><a href="#room">IN THE ROOM</a
+        ><a href="#modding">MODDING</a><a href="#next">STILL TO COME</a
+        ><a href="#nebula">FROM NEBULA</a>
+      </nav>
+      <section class="content" id="rooms">
+        <div class="section-label">ROOMS</div>
+        <div class="section-body">
+          <h2>Rooms and instances</h2>
+          <p>
+            One player hosts a room and the world runs on their PC. Everyone else joins it: 2 to 16
+            players, 8 by default.
+          </p>
+          <ul class="player-list">
+            <li>
+              Join by room code through NebulaNet, NebulaCoop’s own CoopNet-style matchmaker, so
+              nobody has to forward a port.
+            </li>
+            <li>
+              Public rooms show to everyone on the Join page. Friends-only rooms are joined by their
+              code, or found by their password.
+            </li>
+            <li>
+              Or connect directly to an address and port (UDP 7777 by default), with a forwarded
+              port or a VPN such as Tailscale, ZeroTier or Radmin VPN.
+            </li>
+            <li>
+              Per-mission instances, as in sm64coopdx: you see and play with the players on the same
+              galaxy and the same star. The galaxy and star selects show who is where.
+            </li>
+            <li>
+              Mods are the room’s. The host picks them, and joiners download any they don’t have
+              from the host. The game version, disc and mods are checked as a player joins.
+            </li>
+          </ul>
+          <div class="actions">
+            <a class="button primary" href="../play/online/">How to host and join</a>
+          </div>
+        </div>
+      </section>
+      <section class="content" id="players">
+        <div class="section-label">PLAYERS</div>
+        <div class="section-body">
+          <h2>Characters and colours</h2>
+          <ul class="player-list">
+            <li>
+              Mario or Luigi, picked per player on the PLAYER page and switchable at any time, each
+              with their own animations.
+            </li>
+            <li>
+              Characters from mods, as sm64coopdx’s character table. Everyone in the room sees each
+              player’s character.
+            </li>
+            <li>
+              Colours, as sm64coopdx’s palettes: cap, emblem, shirt, overalls, gloves, shoes, hair
+              and skin, or a whole set at once.
+            </li>
+            <li>
+              Luigi plays like Mario by default. The built-in Character Movesets mod gives him his
+              Super Mario Galaxy moves.
+            </li>
+            <li>
+              Nametags over each player’s head, and a player list while Tab (keyboard) or Share
+              (controller) is held.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="content" id="world">
+        <div class="section-label">WORLD</div>
+        <div class="section-body">
+          <h2>A shared world</h2>
+          <p>
+            The host’s game decides the save, collectibles, enemies and objects. The pause and
+            settings menus no longer pause the game.
+          </p>
+          <div class="player-grid">
+            <article class="player-card">
+              <span class="card-label">Enemies</span>
+              <h3>Shared enemies and objects</h3>
+              <p>
+                Hits and squashes play for everyone, enemies follow the nearest player, and switches
+                and blocks are shared.
+              </p>
+            </article>
+            <article class="player-card">
+              <span class="card-label">Collectibles</span>
+              <h3>Coins and Star Bits</h3>
+              <p>
+                Each player’s own, but gone for everyone once taken. Star Chips, the Observatory’s
+                Star Bit bank and high scores are shared.
+              </p>
+            </article>
+            <article class="player-card">
+              <span class="card-label">Bosses</span>
+              <h3>Boss fights</h3>
+              <p>
+                A boss’s phases are shared, its opening plays once, and players who arrive late join
+                the fight in progress.
+              </p>
+            </article>
+            <article class="player-card">
+              <span class="card-label">Stars</span>
+              <h3>Cutscenes and stars</h3>
+              <p>
+                Each player’s cutscenes are their own, and a Grand Star takes everyone in its
+                mission along.
+              </p>
+            </article>
+            <article class="player-card">
+              <span class="card-label">Races</span>
+              <h3>Races</h3>
+              <p>Each player races the rival on their own, with the other players see-through.</p>
+            </article>
+            <article class="player-card">
+              <span class="card-label">Progress</span>
+              <h3>Missions and achievements</h3>
+              <p>
+                A mission resets only once everyone in it has missed or left. Achievements unlocked
+                in a save are every player’s.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="content" id="options">
+        <div class="section-label">ROOM OPTIONS</div>
+        <div class="section-body">
+          <h2>Room options</h2>
+          <p>Set on the Host page, and changed by the host from the in-game ONLINE tab.</p>
+          <ul class="player-list">
+            <li>
+              Bubble on Death (on by default): instead of losing a life, float in a bubble and fly
+              to another player to get back in.
+            </li>
+            <li>
+              Player Interaction: non-solid, solid or friendly fire, with Knockback Strength and a
+              PvP mode.
+            </li>
+            <li>Cheats, which allow the /tp, /teleport and /pos commands.</li>
+            <li>
+              Personal Star Counter, sm64coopdx’s mod built in: each player’s stars this room and
+              all time.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="content" id="room">
+        <div class="section-label">IN THE ROOM</div>
+        <div class="section-body">
+          <h2>Chat and commands</h2>
+          <ul class="player-list">
+            <li>Chat: T opens a line, Enter sends it.</li>
+            <li>
+              Chat commands, as sm64coopdx’s: /help, /players, /kick, /ban, /permban, /moderator and
+              /confirm, with Tab completion.
+            </li>
+            <li>
+              Pop-ups when players join, leave, change galaxy, die or get a star, each turned on or
+              off on the PLAYER page.
+            </li>
+            <li>
+              Any number of saves, each with its own name, Power Stars and achievements. Joiners
+              play the host’s save, and their own saves are untouched.
+            </li>
+            <li>
+              Discord status shows your galaxy, mission and room size, and friends can join your
+              room from it with Join.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="content" id="modding">
+        <div class="section-label">MODDING</div>
+        <div class="section-body">
+          <h2>Co-op mods</h2>
+          <p>
+            NebulaCoop runs Nebula’s .luma mods, plus co-op mods packed as .lumacoop. Co-op mods use
+            LumaScript’s coop calls and events, modeled on sm64coopdx’s Lua API, to see who is in
+            the room and react as players join, leave and move between galaxies. Mods can also add
+            characters and set the colours players wear.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="../modding/docs/coop/">Co-op modding docs</a>
+            <a class="button secondary" href="../play/mods/">Using mods</a>
+          </div>
+        </div>
+      </section>
+      <section class="content" id="next">
+        <div class="section-label">STILL TO COME</div>
+        <div class="section-body">
+          <h2>Still to come</h2>
+          <ul class="player-list">
+            <li>A relay through TURN when a direct path between two players can’t be made.</li>
+            <li>Bosses’ movement and thrown-object hits shared.</li>
+            <li>Story cutscenes with several players, and a dedicated server.</li>
+            <li>Linux, macOS and Android builds.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="content" id="nebula">
+        <div class="section-label">FROM NEBULA</div>
+        <div class="section-body">
+          <h2>Everything from Nebula</h2>
+          <p>
+            Everything that runs the game on a PC is Nebula’s: the host, the renderers, Setup and
+            the launcher, controller and Wii Remote support, mods, achievements and the settings
+            menu. NebulaCoop follows Nebula closely and brings in its updates.
+          </p>
+          <ul class="player-list">
+            <li>
+              Keyboard and mouse, Xbox, PlayStation, Switch, Steam and generic controllers, and a
+              real Wii Remote.
+            </li>
+            <li>
+              Direct3D 12 and Vulkan, internal resolution up to 4K, wide aspect ratios, upscalers
+              and anti-aliasing.
+            </li>
+            <li>Interpolation for displays faster than 60 Hz.</li>
+            <li>Cutscene skip, instant dialogue and an in-game settings menu.</li>
+            <li>.luma mods, Riivolution packs, Dolphin texture packs and replacement movies.</li>
+            <li>Achievements, and save import from a Wii, Dolphin or the Switch release.</li>
+          </ul>
+          <p>
+            See
+            <a class="text-link" href="https://nebula.keepvaibin.com/">Nebula’s website</a>
+            for everything Nebula does.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand" href="../"
+          ><img class="brand-logo" src="../brand-logo.png" alt="" width="34" height="34" /> nebula
+          co-op</a
+        >
+        <p>Co-op by @Mackery6969, built on Nebula by @keepvaibin</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h3>Explore</h3>
+          <a class="text-link" href="../coop/">Co-op</a
+          ><a class="text-link" href="../play/">Player guide</a
+          ><a class="text-link" href="../modding/docs/">Modding docs</a
+          ><a class="text-link" href="../blog/">Blog</a>
+        </div>
+        <div>
+          <h3>Start playing</h3>
+          <a class="text-link" href="../download/">Download</a
+          ><a class="text-link" href="../guide/">Setup &amp; requirements</a
+          ><a class="text-link" href="../play/controls/">Controls</a>
+        </div>
+        <div>
+          <h3>Get help</h3>
+          <a class="text-link" href="../help/">Troubleshooting</a
+          ><a class="text-link" href="../help/#report">Report a bug</a
+          ><a class="text-link" href="https://discord.gg/hNbgFtaRHv">Join Discord ↗</a>
+        </div>
+        <div>
+          <h3>NebulaCoop</h3>
+          <a class="text-link" href="../credits/">Credits</a
+          ><a class="text-link" href="../legal/">Legal &amp; privacy</a
+          ><a class="text-link" href="https://github.com/NebulaCoop/nebula-coop">GitHub ↗</a>
+        </div>
+      </div>
+      <p class="legal-line">
+        © 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL
+        v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not
+        affiliated with Nintendo.
+      </p>
+    </footer>
+    <script type="module" src="../site.js"></script>
+
+    <script id="page-messages" type="application/json">
+      {
+        "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players."
+      }
+    </script>
+  </body>
+</html>

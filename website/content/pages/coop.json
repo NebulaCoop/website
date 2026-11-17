@@ -1,0 +1,158 @@
+{
+  "page": "/coop/",
+  "metadata": {
+    "title": "Co-op — NebulaCoop",
+    "description": "What NebulaCoop adds to Nebula: rooms and room codes, characters and colours, per-mission instances, a shared world, room options and chat."
+  },
+  "text": {
+    "general": {
+      "link_1": "Skip to content"
+    },
+    "header": {
+      "aria_label_1": "NebulaCoop home",
+      "link_1": "nebula co-op",
+      "button_1": "Menu",
+      "label_2": "☰",
+      "aria_label_2": "Main navigation",
+      "link_2": "Co-op",
+      "link_3": "Setup",
+      "link_4": "Player guide",
+      "link_5": "Modding",
+      "link_6": "Help",
+      "link_8": "Blog",
+      "link_7": "Download"
+    },
+    "footer": {
+      "link_1": "nebula co-op",
+      "paragraph_1": "Co-op by @Mackery6969, built on Nebula by @keepvaibin",
+      "subheading_1": "Explore",
+      "link_2": "Co-op",
+      "link_3": "Player guide",
+      "subheading_2": "Start playing",
+      "link_4": "Modding docs",
+      "link_15": "Blog",
+      "link_5": "Download",
+      "link_6": "Setup & requirements",
+      "link_7": "Controls",
+      "subheading_3": "Get help",
+      "link_8": "Troubleshooting",
+      "link_9": "Report a bug",
+      "link_10": "Join Discord ↗",
+      "subheading_4": "NebulaCoop",
+      "link_12": "Credits",
+      "link_13": "Legal & privacy",
+      "link_14": "GitHub ↗",
+      "paragraph_2": "© 2026 Mackery and keepvaibin. NebulaCoop, like Nebula, is free software under the GNU GPL v3. Super Mario Galaxy, Wii and Nintendo are trademarks of Nintendo. NebulaCoop is not affiliated with Nintendo."
+    },
+    "page": {
+      "link_1": "NebulaCoop /",
+      "paragraph_1": "NEBULACOOP",
+      "title_1": "What co-op adds",
+      "paragraph_2": "Online multiplayer for Super Mario Galaxy, in the spirit of sm64coopdx."
+    },
+    "contents": {
+      "aria_label_1": "On this page",
+      "link_1": "ROOMS",
+      "link_2": "PLAYERS",
+      "link_3": "WORLD",
+      "link_4": "ROOM OPTIONS",
+      "link_5": "IN THE ROOM",
+      "link_6": "MODDING",
+      "link_7": "STILL TO COME",
+      "link_8": "FROM NEBULA"
+    },
+    "rooms": {
+      "div_1": "ROOMS",
+      "heading_1": "Rooms and instances",
+      "p_1": "One player hosts a room and the world runs on their PC. Everyone else joins it: 2 to 16 players, 8 by default.",
+      "item_1": "Join by room code through NebulaNet, NebulaCoop’s own CoopNet-style matchmaker, so nobody has to forward a port.",
+      "item_2": "Public rooms show to everyone on the Join page. Friends-only rooms are joined by their code, or found by their password.",
+      "item_3": "Or connect directly to an address and port (UDP 7777 by default), with a forwarded port or a VPN such as Tailscale, ZeroTier or Radmin VPN.",
+      "item_4": "Per-mission instances, as in sm64coopdx: you see and play with the players on the same galaxy and the same star. The galaxy and star selects show who is where.",
+      "item_5": "Mods are the room’s. The host picks them, and joiners download any they don’t have from the host. The game version, disc and mods are checked as a player joins.",
+      "link_1": "How to host and join"
+    },
+    "players": {
+      "div_1": "PLAYERS",
+      "heading_1": "Characters and colours",
+      "item_1": "Mario or Luigi, picked per player on the PLAYER page and switchable at any time, each with their own animations.",
+      "item_2": "Characters from mods, as sm64coopdx’s character table. Everyone in the room sees each player’s character.",
+      "item_3": "Colours, as sm64coopdx’s palettes: cap, emblem, shirt, overalls, gloves, shoes, hair and skin, or a whole set at once.",
+      "item_4": "Luigi plays like Mario by default. The built-in Character Movesets mod gives him his Super Mario Galaxy moves.",
+      "item_5": "Nametags over each player’s head, and a player list while Tab (keyboard) or Share (controller) is held."
+    },
+    "world": {
+      "div_1": "WORLD",
+      "heading_1": "A shared world",
+      "p_1": "The host’s game decides the save, collectibles, enemies and objects. The pause and settings menus no longer pause the game.",
+      "card_1_label": "Enemies",
+      "card_1_heading": "Shared enemies and objects",
+      "card_1": "Hits and squashes play for everyone, enemies follow the nearest player, and switches and blocks are shared.",
+      "card_2_label": "Collectibles",
+      "card_2_heading": "Coins and Star Bits",
+      "card_2": "Each player’s own, but gone for everyone once taken. Star Chips, the Observatory’s Star Bit bank and high scores are shared.",
+      "card_3_label": "Bosses",
+      "card_3_heading": "Boss fights",
+      "card_3": "A boss’s phases are shared, its opening plays once, and players who arrive late join the fight in progress.",
+      "card_4_label": "Stars",
+      "card_4_heading": "Cutscenes and stars",
+      "card_4": "Each player’s cutscenes are their own, and a Grand Star takes everyone in its mission along.",
+      "card_5_label": "Races",
+      "card_5_heading": "Races",
+      "card_5": "Each player races the rival on their own, with the other players see-through.",
+      "card_6_label": "Progress",
+      "card_6_heading": "Missions and achievements",
+      "card_6": "A mission resets only once everyone in it has missed or left. Achievements unlocked in a save are every player’s."
+    },
+    "options": {
+      "div_1": "ROOM OPTIONS",
+      "heading_1": "Room options",
+      "p_1": "Set on the Host page, and changed by the host from the in-game ONLINE tab.",
+      "item_1": "Bubble on Death (on by default): instead of losing a life, float in a bubble and fly to another player to get back in.",
+      "item_2": "Player Interaction: non-solid, solid or friendly fire, with Knockback Strength and a PvP mode.",
+      "item_3": "Cheats, which allow the /tp, /teleport and /pos commands.",
+      "item_4": "Personal Star Counter, sm64coopdx’s mod built in: each player’s stars this room and all time."
+    },
+    "room": {
+      "div_1": "IN THE ROOM",
+      "heading_1": "Chat and commands",
+      "item_1": "Chat: T opens a line, Enter sends it.",
+      "item_2": "Chat commands, as sm64coopdx’s: /help, /players, /kick, /ban, /permban, /moderator and /confirm, with Tab completion.",
+      "item_3": "Pop-ups when players join, leave, change galaxy, die or get a star, each turned on or off on the PLAYER page.",
+      "item_4": "Any number of saves, each with its own name, Power Stars and achievements. Joiners play the host’s save, and their own saves are untouched.",
+      "item_5": "Discord status shows your galaxy, mission and room size, and friends can join your room from it with Join."
+    },
+    "modding": {
+      "div_1": "MODDING",
+      "heading_1": "Co-op mods",
+      "p_1": "NebulaCoop runs Nebula’s .luma mods, plus co-op mods packed as .lumacoop. Co-op mods use LumaScript’s coop calls and events, modeled on sm64coopdx’s Lua API, to see who is in the room and react as players join, leave and move between galaxies. Mods can also add characters and set the colours players wear.",
+      "link_1": "Co-op modding docs",
+      "link_2": "Using mods"
+    },
+    "next": {
+      "div_1": "STILL TO COME",
+      "heading_1": "Still to come",
+      "item_1": "A relay through TURN when a direct path between two players can’t be made.",
+      "item_2": "Bosses’ movement and thrown-object hits shared.",
+      "item_3": "Story cutscenes with several players, and a dedicated server.",
+      "item_4": "Linux, macOS and Android builds."
+    },
+    "nebula": {
+      "div_1": "FROM NEBULA",
+      "heading_1": "Everything from Nebula",
+      "p_1": "Everything that runs the game on a PC is Nebula’s: the host, the renderers, Setup and the launcher, controller and Wii Remote support, mods, achievements and the settings menu. NebulaCoop follows Nebula closely and brings in its updates.",
+      "item_1": "Keyboard and mouse, Xbox, PlayStation, Switch, Steam and generic controllers, and a real Wii Remote.",
+      "item_2": "Direct3D 12 and Vulkan, internal resolution up to 4K, wide aspect ratios, upscalers and anti-aliasing.",
+      "item_3": "Interpolation for displays faster than 60 Hz.",
+      "item_4": "Cutscene skip, instant dialogue and an in-game settings menu.",
+      "item_5": ".luma mods, Riivolution packs, Dolphin texture packs and replacement movies.",
+      "item_6": "Achievements, and save import from a Wii, Dolphin or the Switch release.",
+      "p_2": "See",
+      "link_1": "Nebula’s website",
+      "p_3": "for everything Nebula does."
+    }
+  },
+  "messages": {
+    "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players."
+  }
+}
