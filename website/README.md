@@ -80,8 +80,8 @@ their colours, type, buttons and panels. `docs.css` and `blog.css` use the same 
   [Nunito](https://fonts.google.com/specimen/Nunito) for reading, both bundled from Fontsource (SIL Open Font
   License).
 - Logo: `assets/brand/nebulacoop-mark.svg`. `npm run icons` renders the favicons and `brand-logo.png` from it.
-- Home page: `comet-scene.js` shows Good Egg Galaxy's starting planet turning slowly, with one comet per player
-  in orbit. Clicking the sky launches another player, up to 16. Only the home page loads Three.js. Until the
+- Home page: `comet-scene.js` shows Good Egg Galaxy's starting planet turning slowly, with a few players'
+  comets in orbit. Only the home page loads Three.js. Until the
   planet loads, or if it can't, a small planet drawn in code stands in.
 
 The planet (`public/environment/garden/`: `DiskGardenPlanet.glb` and its WebP textures) is the game's own model,

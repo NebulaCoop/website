@@ -51,6 +51,25 @@ body,
 ::selection {
   background: #ffd15c55;
 }
+/* The cursor: a star pointer like the one in the game's menus, glowing over anything you can click. */
+html {
+  --star-cursor: url('/cursor/star-pointer.svg') 16 16, url('/cursor/star-pointer.png') 16 16, auto;
+  --star-cursor-hover:
+    url('/cursor/star-pointer-hover.svg') 16 16, url('/cursor/star-pointer-hover.png') 16 16,
+    pointer;
+  cursor: var(--star-cursor);
+}
+a,
+button,
+summary,
+label,
+[role='button'] {
+  cursor: var(--star-cursor-hover);
+}
+input,
+textarea {
+  cursor: text;
+}
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -595,8 +614,7 @@ tbody th {
   height: 100svh;
   min-height: 700px;
   background: radial-gradient(ellipse 55% 65% at 72% 46%, #3d2a8a66, transparent 70%);
-  pointer-events: auto;
-  cursor: crosshair;
+  pointer-events: none;
 }
 .home-page #space::after {
   content: '';
@@ -787,11 +805,6 @@ tbody th {
 .hero-credit span {
   margin: 0 8px;
   opacity: 0.55;
-}
-.interaction-hint {
-  margin-top: 6px !important;
-  color: var(--ink-faint);
-  font-size: 12px;
 }
 
 /* "together." arrives after the line: it streaks in like a comet, lands as a gold add-on, throws off a few

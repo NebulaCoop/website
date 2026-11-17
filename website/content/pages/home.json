@@ -94,7 +94,6 @@
       "download_button": "Get NebulaCoop",
       "setup_link": "Read the setup guide →",
       "scroll_prompt": "SCROLL",
-      "interaction_hint": "Click or tap the sky to send another player into orbit.",
       "coop_tag": "Co-op",
       "coop_button": "What co-op adds",
       "credit_1": "keepvaibin",
@@ -167,8 +166,6 @@
     }
   },
   "messages": {
-    "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players.",
-    "launched": "{count} of {max} players in orbit.",
-    "full": "All {max} players are in orbit. Click again to start over with two."
+    "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players."
   }
 }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- The site's cursor: a star pointer like the one in Super Mario Galaxy's menus, drawn for this site. -->
+  <defs>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9f3ff"/>
+      <stop offset="1" stop-color="#2f8dff"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#bff4ff" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#bff4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <path d="M16.00 3.60 L19.64 11.78 L28.55 12.72 L21.90 18.72 L23.76 27.48 L16.00 23.00 L8.24 27.48 L10.10 18.72 L3.45 12.72 L12.36 11.78 Z" fill="url(#fill)" stroke="#123a6b" stroke-width="3.6" stroke-linejoin="round"/>
+  <path d="M16.00 3.60 L19.64 11.78 L28.55 12.72 L21.90 18.72 L23.76 27.48 L16.00 23.00 L8.24 27.48 L10.10 18.72 L3.45 12.72 L12.36 11.78 Z" fill="url(#fill)" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+  <ellipse cx="13.2" cy="12.6" rx="2.6" ry="1.5" fill="#ffffff" opacity=".75" transform="rotate(-25 13.2 12.6)"/>
+</svg>

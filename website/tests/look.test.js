@@ -47,7 +47,6 @@ test('the only game model is the home page planet, and no game fonts are used', 
 test('the home page has the comet scene and no Star Bit game', () => {
   const home = readFileSync(resolve(root, 'templates/pages/home.html'), 'utf8');
   assert.match(home, /id="space"/);
-  assert.match(home, /id="orbit-status"/);
   assert.doesNotMatch(home, /id="star-count"|id="formation"|id="regenerate"/);
   assert.match(readFileSync(resolve(root, 'home.js'), 'utf8'), /comet-scene\.js/);
 });

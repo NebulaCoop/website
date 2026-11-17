@@ -1,12 +1,10 @@
-// The home page's scene: Good Egg Galaxy's starting planet, turning slowly, with every player's comet in orbit
-// around it. Clicking the sky launches another player, up to the 16 a room can hold. The planet model comes from the
-// game (public/environment/garden/); until it loads, or if it can't, a small planet drawn in code stands in.
+// The home page's scene: Good Egg Galaxy's starting planet, turning slowly, with a few players' comets in orbit
+// around it. The planet model comes from the game (public/environment/garden/); until it loads, or if it can't, a
+// small planet drawn in code stands in.
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { pageMessage } from './page-copy.js';
 
-const MAX_PLAYERS = 16;
-const START_PLAYERS = 2;
+const PLAYERS = 5;
 // Player colours, in the order players join.
 const COLORS = [
   '#ff79c6',
@@ -29,7 +27,6 @@ const COLORS = [
 const TRAIL = 56;
 
 const host = document.querySelector('#space');
-const status = document.querySelector('#orbit-status');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 
 const renderer = new THREE.WebGLRenderer({
@@ -210,7 +207,8 @@ world.add(planet);
 }
 
 /* Good Egg Galaxy's starting planet. It replaces the stand-in once loaded and spins about its own axis. */
-const PLANET_SPIN = 0.08;
+// Radians per second: one turn about every 25 seconds.
+const PLANET_SPIN = 0.25;
 const garden = new THREE.Group();
 garden.rotation.set(0.4, 0, -0.25);
 const gardenSpin = new THREE.Group();
@@ -222,7 +220,24 @@ new GLTFLoader().load(
     model.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(model);
     const size = box.getSize(new THREE.Vector3());
-    model.position.sub(box.getCenter(new THREE.Vector3()));
+    // Spin about the middle of the grass disc, not the middle of the whole model: the pillar and the arches hang
+    // off to one side, and turning about the box's centre swings the disc away from the glow behind it.
+    let disc = null;
+    model.traverse((child) => {
+      if (!child.isMesh) return;
+      const part = new THREE.Box3().setFromObject(child);
+      const extent = part.getSize(new THREE.Vector3());
+      const area = extent.x * extent.z;
+      if (extent.y < Math.min(extent.x, extent.z) * 0.2 && area > (disc?.area ?? 0))
+        disc = { part, area };
+    });
+    const axis = box.getCenter(new THREE.Vector3());
+    if (disc) {
+      const middle = disc.part.getCenter(new THREE.Vector3());
+      axis.x = middle.x;
+      axis.z = middle.z;
+    }
+    model.position.sub(axis);
     // About as wide as the stand-in, so the comets' orbits clear it.
     gardenSpin.scale.setScalar((PLANET_RADIUS * 2.9) / Math.max(size.x, size.y, size.z));
     model.traverse((child) => {
@@ -296,7 +311,7 @@ const trailMaterial = new THREE.ShaderMaterial({
 });
 
 const comets = [];
-function addComet(index, launch) {
+function addComet(index) {
   const color = new THREE.Color(COLORS[index % COLORS.length]);
   const radius = 1.95 + (index % 6) * 0.22 + random() * 0.12;
   const tilt = new THREE.Quaternion().setFromEuler(
@@ -342,28 +357,17 @@ function addComet(index, launch) {
     tilt,
     speed: 0.9 / radius ** 1.5,
     angle: random() * Math.PI * 2,
-    born: launch ? clock : -10,
   };
   comets.push(comet);
   place(comet, clock);
   return comet;
 }
-function removeComets() {
-  for (const comet of comets.splice(0)) {
-    world.remove(comet.head, comet.trail);
-    comet.head.material.dispose();
-    comet.head.children[0].material.dispose();
-    comet.trail.geometry.dispose();
-  }
-}
 
 const point = new THREE.Vector3();
-function orbitPoint(comet, angle, age, target) {
-  // A launched comet spirals out from the planet's surface over its first 1.4 seconds.
-  const grow = Math.min(1, Math.max(0, age / 1.4));
-  const eased = 1 - (1 - grow) ** 3;
-  const radius = PLANET_RADIUS + (comet.radius - PLANET_RADIUS) * eased;
-  target.set(Math.cos(angle) * radius, 0, Math.sin(angle) * radius).applyQuaternion(comet.tilt);
+function orbitPoint(comet, angle, target) {
+  target
+    .set(Math.cos(angle) * comet.radius, 0, Math.sin(angle) * comet.radius)
+    .applyQuaternion(comet.tilt);
   return target;
 }
 // The tail is where the comet was over the last TRAIL_SECONDS, so it looks the same at any frame rate.
@@ -372,7 +376,7 @@ function place(comet, time) {
   const array = comet.trail.geometry.attributes.position.array;
   for (let i = 0; i < TRAIL; i++) {
     const then = time - (i / (TRAIL - 1)) * TRAIL_SECONDS;
-    orbitPoint(comet, comet.angle + then * comet.speed * 2, then - comet.born, point);
+    orbitPoint(comet, comet.angle + then * comet.speed * 2, point);
     array.set([point.x, point.y, point.z], i * 3);
     if (i === 0) comet.head.position.copy(point);
   }
@@ -415,35 +419,8 @@ addEventListener(
   { passive: true },
 );
 
-/* Click or tap the sky: another player joins, until the room is full. */
-function announce() {
-  status.textContent =
-    comets.length >= MAX_PLAYERS
-      ? pageMessage('full', { max: MAX_PLAYERS })
-      : pageMessage('launched', { count: comets.length, max: MAX_PLAYERS });
-}
-let fullAt = -1;
-const haloColor = new THREE.Color('#8f7bff');
-const fullColor = new THREE.Color('#ffd15c');
-host.addEventListener('click', () => {
-  if (comets.length >= MAX_PLAYERS) {
-    removeComets();
-    for (let i = 0; i < START_PLAYERS; i++) addComet(i, true);
-  } else {
-    addComet(comets.length, true);
-    if (comets.length === MAX_PLAYERS) fullAt = clock;
-  }
-  announce();
-  if (!running) {
-    // Without motion, show the new player in place at once.
-    for (const comet of comets) comet.born = -10;
-    for (const comet of comets) place(comet, clock);
-    render();
-  }
-});
-
 let clock = 0;
-for (let i = 0; i < START_PLAYERS; i++) addComet(i, false);
+for (let i = 0; i < PLAYERS; i++) addComet(i);
 
 function render() {
   renderer.render(scene, camera);
@@ -465,9 +442,6 @@ function frame(now) {
   camera.position.y = 0.9 - look.y * 0.4;
   camera.lookAt(0, 0, 0);
   for (const comet of comets) place(comet, clock);
-  // A full room flashes the halo gold once.
-  const flash = fullAt >= 0 ? Math.max(0, 1 - (clock - fullAt) / 1.2) : 0;
-  halo.material.uniforms.glow.value.copy(haloColor).lerp(fullColor, flash);
   render();
   requestAnimationFrame(frame);
 }
