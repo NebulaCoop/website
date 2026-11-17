@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- NebulaCoop mark: a gold star with two player comets on one orbit. Original artwork for this site. -->
+  <defs>
+    <radialGradient id="sky" cx="40%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#4b2f9e"/>
+      <stop offset="1" stop-color="#140d3a"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3b8"/>
+      <stop offset=".55" stop-color="#ffd15c"/>
+      <stop offset="1" stop-color="#f29b1d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="url(#sky)"/>
+  <ellipse cx="32" cy="34" rx="27" ry="10" fill="none" stroke="#c9b8ff" stroke-opacity=".55" stroke-width="2" transform="rotate(-18 32 34)"/>
+  <path d="M32.00 14.00 L37.05 26.04 L50.07 27.13 L40.18 35.66 L43.17 48.37 L32.00 41.60 L20.83 48.37 L23.82 35.66 L13.93 27.13 L26.95 26.04 Z" fill="url(#gold)" stroke="#fff6d6" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="9.5" cy="42.5" r="5" fill="#ff79c6" stroke="#fff" stroke-width="1.6"/>
+  <circle cx="54.5" cy="25.5" r="5" fill="#5fe1ff" stroke="#fff" stroke-width="1.6"/>
+</svg>

@@ -1,0 +1,1030 @@
+@import '@fontsource-variable/fredoka/index.css';
+@import '@fontsource-variable/nunito/index.css';
+
+/* NebulaCoop's own look, "the Comet Observatory at night": deep violet sky, gold lamplight, and each player's
+   comet colour as an accent. style.css and player-site.css lay the pages out; this file gives them their look,
+   so it loads last. */
+:root {
+  color-scheme: dark;
+  --night-0: #08061c;
+  --night-1: #110c2e;
+  --night-2: #1b1446;
+  --violet: #2c1f6b;
+  --violet-hi: #6d4fd6;
+  --lilac: #c9b8ff;
+  --gold: #ffd15c;
+  --gold-hi: #fff1b8;
+  --gold-deep: #e8961c;
+  --gold-shadow: #8a4f0e;
+  --pink: #ff79c6;
+  --cyan: #5fe1ff;
+  --mint: #7ef0c0;
+  --ink: #f4f0ff;
+  --ink-soft: #d3cbf3;
+  --ink-faint: #a69cd6;
+  --line: #c9b8ff24;
+  --line-strong: #c9b8ff4d;
+  --panel: linear-gradient(160deg, #251b5fd9, #130e35eb);
+  --tile: #ffffff09;
+  --tile-hover: #ffffff12;
+  --accent: var(--gold);
+  --muted: var(--ink-faint);
+  --display: 'Fredoka Variable', 'Trebuchet MS', sans-serif;
+  --text: 'Nunito Variable', 'Segoe UI', Arial, sans-serif;
+  --stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cg fill='%23fff'%3E%3Ccircle cx='14' cy='22' r='.8' opacity='.7'/%3E%3Ccircle cx='71' cy='140' r='1.1' opacity='.55'/%3E%3Ccircle cx='122' cy='48' r='.7' opacity='.8'/%3E%3Ccircle cx='190' cy='96' r='1.3' opacity='.5'/%3E%3Ccircle cx='247' cy='18' r='.9' opacity='.75'/%3E%3Ccircle cx='298' cy='170' r='.8' opacity='.6'/%3E%3Ccircle cx='36' cy='262' r='1' opacity='.65'/%3E%3Ccircle cx='158' cy='214' r='.7' opacity='.7'/%3E%3Ccircle cx='226' cy='288' r='1.2' opacity='.45'/%3E%3Ccircle cx='282' cy='244' r='.7' opacity='.8'/%3E%3Ccircle cx='96' cy='302' r='.8' opacity='.6'/%3E%3C/g%3E%3Cg fill='%23ffe9a8'%3E%3Ccircle cx='212' cy='160' r='1.2' opacity='.6'/%3E%3Ccircle cx='52' cy='88' r='1' opacity='.5'/%3E%3C/g%3E%3Cg fill='%23c9b8ff'%3E%3Ccircle cx='136' cy='272' r='1.1' opacity='.6'/%3E%3Ccircle cx='308' cy='72' r='1' opacity='.6'/%3E%3C/g%3E%3C/svg%3E");
+  font-family: var(--text);
+  background: var(--night-0);
+  color: var(--ink);
+}
+
+body,
+.inner-page {
+  background:
+    var(--stars) 0 0 / 320px 320px,
+    radial-gradient(1100px 700px at 88% -8%, #5b2fa24d, transparent 62%),
+    radial-gradient(900px 640px at -12% 34%, #1f5f9a2e, transparent 62%),
+    radial-gradient(1100px 800px at 50% 115%, #8a2f8a29, transparent 62%),
+    var(--night-0);
+  color: var(--ink);
+  font-family: var(--text);
+}
+::selection {
+  background: #ffd15c55;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Type: Fredoka for anything you read at a glance, Nunito for reading. */
+h1,
+h2,
+h3,
+.brand,
+nav,
+button,
+.button,
+summary,
+.section-label,
+.eyebrow,
+.tagline,
+.platform,
+.scroll,
+.card-label,
+.glance-strip strong,
+.footer-links h3,
+.status-pill,
+.examples-label,
+.error-try-label {
+  font-family: var(--display);
+}
+.section-body > p,
+.player-card p,
+.platform-grid p,
+.player-list,
+.setup-steps p,
+.error-entry p,
+.media-placeholder p,
+.facts p,
+li p,
+details p,
+.achievement-grid details p,
+.page-heading > p:not(.eyebrow),
+.glance-strip span,
+.breadcrumb,
+.page-toc a,
+table,
+.site-footer .footer-top p,
+.footer-links a,
+.site-footer .legal-line,
+.release-help,
+.search-empty {
+  font-family: var(--text);
+}
+
+/* Header: the brand on the left, and one rounded bar of links. */
+.site-header {
+  padding: 14px clamp(16px, 4vw, 48px);
+  gap: 24px;
+  min-height: 80px;
+  border: 0;
+  position: relative;
+  z-index: 5;
+}
+.brand {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+  gap: 10px;
+}
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 4px 10px #6d4fd666);
+}
+.site-header nav {
+  gap: 2px;
+  padding: 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: #150f3acc;
+  box-shadow:
+    inset 0 1px 0 #ffffff12,
+    0 10px 30px #0006;
+  backdrop-filter: blur(10px);
+}
+.site-header nav > a,
+nav > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.site-header nav > a:hover {
+  color: var(--ink);
+  background: #ffffff14;
+  transform: none;
+}
+.site-header nav > a[aria-current='page'] {
+  outline: 0;
+  color: var(--night-1);
+  background: var(--lilac);
+}
+.site-header nav > a[href$='download/'] {
+  color: #2b1650;
+  font-weight: 600;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold) 60%, #f5a524);
+}
+.site-header nav > a[href$='download/']:hover {
+  background: linear-gradient(180deg, #fff8d6, var(--gold-hi) 50%, var(--gold));
+}
+.nav-toggle {
+  color: var(--ink);
+  background: #150f3acc;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-family: var(--display);
+  font-weight: 600;
+}
+
+/* Buttons: chunky rounded keys. Gold for the main action, glass for the rest. */
+.button {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  min-height: 48px;
+  padding: 0 24px;
+  gap: 10px;
+  border-radius: 14px;
+  text-shadow: none;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s,
+    background 0.15s;
+}
+.button.primary,
+.primary {
+  color: #2b1650;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold) 55%, #f5a524);
+  border: 0;
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 #fffbe6,
+    inset 0 -3px 0 #c9781266,
+    0 5px 0 var(--gold-shadow),
+    0 12px 26px #ffb12a33;
+}
+.button.primary:hover,
+.primary:hover {
+  background: linear-gradient(180deg, #fff8d6, var(--gold-hi) 45%, var(--gold));
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 #fffbe6,
+    inset 0 -3px 0 #c9781266,
+    0 7px 0 var(--gold-shadow),
+    0 16px 32px #ffb12a55;
+}
+.button.secondary,
+.secondary {
+  color: var(--ink);
+  background: #ffffff0f;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 #ffffff1a,
+    0 5px 0 #0a0720;
+}
+.button.secondary:hover,
+.secondary:hover {
+  background: #ffffff1c;
+  border-color: var(--lilac);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 #ffffff1a,
+    0 7px 0 #0a0720;
+}
+.button:active,
+.button.primary:active,
+.button.secondary:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 0 #ffffff1a,
+    0 2px 0 #0a0720;
+}
+.button .discord-logo {
+  color: #4752c4;
+}
+
+/* Panels: frosted violet glass with a gold lamp line across the top. */
+.content {
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  box-shadow:
+    inset 0 1px 0 #ffffff14,
+    0 30px 60px -24px #000c;
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+}
+.content::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.75;
+}
+.section-label,
+.content > .section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.section-label:before,
+.content > .section-label:before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  flex: none;
+  background: url('/brand-logo.png') center / contain no-repeat;
+  text-shadow: none;
+}
+h2,
+.content h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  text-shadow: none;
+}
+h2 span {
+  color: var(--gold);
+}
+h3 {
+  font-weight: 600;
+  color: var(--ink);
+}
+.section-body > p,
+.facts p,
+li p,
+details p,
+.player-list,
+.error-entry p {
+  color: var(--ink-soft);
+}
+.section-body > p a,
+details p a,
+.text-link {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-decoration-color: #5fe1ff66;
+  text-underline-offset: 4px;
+}
+.section-body > p a:hover,
+details p a:hover,
+.text-link:hover {
+  color: #b5f2ff;
+  text-decoration-color: currentColor;
+}
+
+/* Tiles inside panels: cards, facts, steps and questions all share one quiet surface. */
+.player-card,
+.facts > div,
+.platform-grid article,
+li,
+details {
+  background: var(--tile);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: none;
+}
+.player-list li {
+  background: none;
+  border: 0;
+}
+.player-card {
+  transition:
+    transform 0.18s,
+    border-color 0.18s,
+    background 0.18s;
+}
+.player-card:hover {
+  transform: translateY(-3px);
+  background: var(--tile-hover);
+  border-color: #ffd15c66;
+}
+.player-card h3 {
+  color: var(--ink);
+}
+.player-card h3 span {
+  color: var(--gold);
+}
+.player-card p,
+.platform-grid p {
+  color: var(--ink-soft);
+}
+.card-label,
+.examples-label,
+.error-try-label {
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: var(--pink);
+}
+.player-card:nth-child(3n + 2) .card-label {
+  color: var(--cyan);
+}
+.player-card:nth-child(3n + 3) .card-label {
+  color: var(--mint);
+}
+.facts span {
+  color: var(--gold);
+}
+li > span,
+.setup-steps li > span {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b1650;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  box-shadow: 0 3px 0 var(--gold-shadow);
+}
+li > a {
+  color: var(--ink);
+  background: #ffffff14;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  box-shadow: none;
+}
+li > a:hover {
+  background: #ffffff24;
+}
+summary {
+  color: var(--ink);
+  font-weight: 500;
+  border-radius: 17px;
+}
+summary:hover,
+details[open] > summary {
+  background: #ffffff0d;
+  box-shadow: none;
+  color: var(--gold-hi);
+}
+code {
+  color: #ffe9a8;
+  background: #ffffff12;
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+kbd {
+  color: var(--ink);
+  background: var(--violet);
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 3px;
+  border-radius: 6px;
+}
+.table-scroll {
+  background: #0f0b2bcc;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+}
+table {
+  color: var(--ink-soft);
+}
+th,
+td {
+  border-bottom-color: var(--line);
+}
+thead th {
+  color: var(--ink);
+  background: #2c1f6b;
+}
+tbody th {
+  color: var(--ink);
+}
+.table-scroll:focus-visible {
+  outline-color: var(--gold);
+}
+.status-pill {
+  color: var(--lilac);
+  background: #c9b8ff22;
+  border: 1px solid #c9b8ff40;
+}
+.status-pill.available {
+  color: var(--mint);
+  background: #7ef0c01f;
+  border-color: #7ef0c040;
+}
+.media-placeholder {
+  border-color: var(--line-strong);
+  background: radial-gradient(ellipse at 50% 20%, #3d2a8a, #140f37 70%);
+  color: var(--ink);
+}
+.media-placeholder > span {
+  color: var(--gold);
+}
+.media-placeholder p {
+  color: var(--ink-soft);
+}
+.site-search {
+  color: var(--ink);
+  background: #0f0b2b;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 14px;
+}
+.site-search:focus {
+  border-color: var(--gold);
+  outline: 0;
+}
+.search-label {
+  color: var(--ink);
+}
+.error-entry {
+  border-bottom-color: var(--line);
+}
+.error-entry:target {
+  background: #ffd15c14;
+}
+.release-help {
+  color: var(--cyan);
+}
+.built-on {
+  margin: 22px 0 0;
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+
+/* Inner pages. */
+.page-heading .eyebrow {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.page-heading h1 {
+  font-weight: 700;
+  color: var(--ink);
+  text-shadow:
+    0 3px 0 var(--violet-hi),
+    0 6px 0 var(--violet);
+}
+.page-heading > p:not(.eyebrow) {
+  color: var(--ink-soft);
+}
+.breadcrumb {
+  color: var(--cyan);
+}
+.page-toc a {
+  color: var(--ink-soft);
+  background: var(--tile);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+.page-toc a:hover {
+  color: var(--ink);
+  border-color: var(--gold);
+}
+
+/* Footer. */
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+.site-footer .footer-top p,
+.site-footer .legal-line {
+  color: var(--ink-faint);
+}
+.footer-links h3 {
+  color: var(--gold-hi);
+  font-weight: 600;
+}
+.footer-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+/* The four numbers under the home page's hero. */
+.glance-strip {
+  border: 0;
+  gap: 14px;
+  padding: 0;
+}
+.glance-strip > div {
+  padding: 22px 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--tile);
+}
+.glance-strip strong {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.glance-strip > div:nth-child(2) strong {
+  color: var(--pink);
+}
+.glance-strip > div:nth-child(3) strong {
+  color: var(--cyan);
+}
+.glance-strip > div:nth-child(4) strong {
+  color: var(--mint);
+}
+.glance-strip span {
+  color: var(--ink-faint);
+}
+
+/* Home page hero: the copy on the left, our comet scene behind it on the right. */
+.home-page #space {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 0;
+  height: 100svh;
+  min-height: 700px;
+  background: radial-gradient(ellipse 55% 65% at 72% 46%, #3d2a8a66, transparent 70%);
+  pointer-events: auto;
+  cursor: crosshair;
+}
+.home-page #space::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(transparent 78%, var(--night-0));
+}
+.home-page .site-header,
+.home-page main {
+  position: relative;
+  z-index: 1;
+}
+.home-page main {
+  pointer-events: none;
+}
+.home-page main > * {
+  pointer-events: auto;
+}
+.home-page .hero {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  min-height: max(620px, calc(100svh - 80px));
+  height: auto;
+  padding: 24px clamp(20px, 7vw, 110px) 120px;
+  text-align: left;
+  pointer-events: none;
+}
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 580px;
+  pointer-events: auto;
+}
+.hero .eyebrow {
+  gap: 10px;
+  padding: 7px 14px;
+  border: 1px solid #ffd15c55;
+  border-radius: 999px;
+  background: #ffd15c14;
+  color: var(--gold-hi);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+.hero .eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--gold);
+  animation: lamp 2.4s ease-in-out infinite;
+}
+@keyframes lamp {
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 4px var(--gold);
+  }
+}
+.hero h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.16em;
+  margin: 22px 0 14px;
+  font-size: clamp(64px, 9vw, 132px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: #fff;
+  transform: none;
+  -webkit-text-stroke: 0;
+  text-shadow:
+    0 4px 0 var(--violet-hi),
+    0 8px 0 var(--violet),
+    0 18px 40px #000a;
+}
+.hero .title-coop {
+  position: static;
+  font: inherit;
+  font-size: 0.6em;
+  letter-spacing: 0;
+  transform: rotate(-5deg) translateY(-0.12em);
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold) 55%, #f59e1f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--gold);
+  text-shadow: none;
+  filter: drop-shadow(0 4px 0 var(--gold-shadow)) drop-shadow(0 10px 18px #ffb12a40);
+}
+.hero .tagline {
+  margin: 4px 0 18px;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 500;
+  color: var(--ink);
+  text-shadow: 0 2px 12px #0008;
+}
+.hero .intro {
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--ink-soft);
+  font-family: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+  text-shadow: 0 1px 10px #000c;
+}
+.hero .intro::after {
+  display: none;
+}
+.hero .actions {
+  justify-content: flex-start;
+  margin-top: 28px;
+  gap: 14px;
+}
+.hero-guide {
+  margin-top: 18px;
+  color: var(--ink-soft);
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration-color: #c9b8ff66;
+}
+.hero-guide:hover {
+  color: var(--gold);
+}
+.hero .platform {
+  margin-top: 22px;
+  color: var(--ink-faint);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+.home-page .hero-bottom {
+  position: absolute;
+  left: clamp(20px, 7vw, 110px);
+  right: clamp(20px, 5vw, 70px);
+  bottom: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  pointer-events: none;
+}
+.home-page .hero-bottom > * {
+  pointer-events: auto;
+}
+.scroll {
+  color: var(--ink-faint);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.scroll span {
+  color: var(--gold);
+  animation: drift-down 2.2s ease-in-out infinite;
+}
+@keyframes drift-down {
+  50% {
+    transform: translateY(5px);
+  }
+}
+.hero-sign {
+  text-align: right;
+}
+.hero-sign p {
+  position: static;
+  margin: 0;
+}
+.hero-credit {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--gold-hi);
+}
+.hero-credit a:hover,
+.hero-credit a:focus-visible {
+  color: var(--gold);
+  text-decoration: underline;
+}
+.hero-credit span {
+  margin: 0 8px;
+  opacity: 0.55;
+}
+.interaction-hint {
+  margin-top: 6px !important;
+  color: var(--ink-faint);
+  font-size: 12px;
+}
+
+/* "together." arrives after the line: it streaks in like a comet, lands as a gold add-on, throws off a few
+   sparks, then keeps a slow shimmer. */
+.tagline-together {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.12em;
+  transform-origin: 30% 70%;
+  animation: together-arrive 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.25) 1s both;
+}
+.together-word {
+  display: inline-block;
+  padding: 0 0.08em;
+  font-weight: 700;
+  background: linear-gradient(
+    100deg,
+    var(--gold) 0%,
+    var(--pink) 25%,
+    var(--cyan) 50%,
+    var(--gold) 75%,
+    var(--pink) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--gold);
+  text-shadow: none;
+  filter: drop-shadow(0 3px 0 #2c1f6b) drop-shadow(0 0 12px #ffcf6799);
+  animation:
+    together-shimmer 5s linear 1.9s infinite,
+    together-bob 3.2s ease-in-out 1.9s infinite;
+}
+/* The comet's tail while it flies in. */
+.tagline-together::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 96%;
+  width: 3.2em;
+  height: 0.16em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #ffd15ccc);
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: together-tail 0.9s ease-out 1s both;
+  pointer-events: none;
+}
+/* The burst of sparks when it lands. */
+.tagline-together::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 50%;
+  color: var(--gold-hi);
+  opacity: 0;
+  box-shadow:
+    0 -1.1em 0 0 currentColor,
+    0.95em -0.55em 0 0 var(--pink),
+    0.95em 0.55em 0 0 currentColor,
+    0 1.1em 0 0 var(--cyan),
+    -0.95em 0.55em 0 0 currentColor,
+    -0.95em -0.55em 0 0 var(--mint);
+  animation: together-sparks 0.7s ease-out 1.65s both;
+  pointer-events: none;
+}
+@keyframes together-arrive {
+  0% {
+    opacity: 0;
+    transform: translate(1.6em, -1.1em) scale(0.3) rotate(18deg);
+  }
+  55% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 0) scale(1.18) rotate(-9deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(-4deg);
+  }
+}
+@keyframes together-tail {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+@keyframes together-sparks {
+  0% {
+    opacity: 1;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+@keyframes together-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes together-bob {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header nav > a {
+    padding: 0 11px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    padding: 10px 16px;
+    min-height: 64px;
+  }
+  .brand {
+    font-size: 20px;
+  }
+  .brand-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .site-header nav {
+    top: 62px;
+    left: 12px;
+    right: 12px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #150f3af5;
+  }
+  .site-header nav.is-open {
+    gap: 4px;
+  }
+  .site-header nav > a {
+    justify-content: flex-start;
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  .content {
+    border-width: 1px;
+    border-radius: 22px;
+  }
+  .content::before {
+    left: 22px;
+    right: 22px;
+  }
+  .home-page #space {
+    height: min(100vw, 430px);
+    min-height: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, #3d2a8a66, transparent 70%);
+  }
+  .home-page #space::after {
+    background: linear-gradient(transparent 60%, var(--night-0));
+  }
+  .home-page .hero {
+    justify-items: center;
+    min-height: 0;
+    padding: min(78vw, 330px) 16px 28px;
+    text-align: center;
+  }
+  .hero-copy {
+    align-items: center;
+  }
+  .hero h1 {
+    justify-content: center;
+    font-size: clamp(52px, 17vw, 80px);
+  }
+  .hero .tagline {
+    font-size: 22px;
+  }
+  .hero .intro {
+    font-size: 15px;
+  }
+  .hero .actions {
+    justify-content: center;
+  }
+  .hero .actions .button {
+    font-size: 14px;
+    padding: 0 18px;
+  }
+  .hero .platform {
+    font-size: 10px;
+  }
+  .home-page .hero-bottom {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 34px;
+  }
+  .home-page .scroll {
+    display: none;
+  }
+  .hero-sign {
+    text-align: center;
+  }
+  .glance-strip strong {
+    font-size: 28px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero .eyebrow span,
+  .scroll span,
+  .together-word {
+    animation: none;
+  }
+  .tagline-together {
+    animation: none;
+    transform: rotate(-4deg);
+  }
+  .tagline-together::before,
+  .tagline-together::after {
+    display: none;
+  }
+  .button,
+  .player-card {
+    transition: none;
+  }
+}

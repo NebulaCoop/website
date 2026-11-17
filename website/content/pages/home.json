@@ -6,12 +6,7 @@
   },
   "text": {
     "general": {
-      "link_1": "Skip to content",
-      "label_2": "✦",
-      "label_3": "×",
-      "label_4": "0",
-      "note_1": "STAR BITS",
-      "div_1": "✧"
+      "link_1": "Skip to content"
     },
     "header": {
       "aria_label_1": "NebulaCoop home",
@@ -90,20 +85,17 @@
       "paragraph_8": "No. NebulaCoop is an independent project, not affiliated with, endorsed by or sponsored by Nintendo."
     },
     "hero": {
-      "label_2": "✦",
       "label_3": "↓",
-      "eyebrow": "SUPER MARIO GALAXY, ONLINE CO-OP",
-      "title": "NEBULA",
+      "eyebrow": "SUPER MARIO GALAXY · ONLINE CO-OP",
+      "title": "Nebula",
       "tagline": "A little closer to the stars,",
       "intro": "Super Mario Galaxy with friends, running natively on your PC. Host a room, share its code and explore the galaxies together.",
       "platforms": "WINDOWS · 2 TO 16 PLAYERS",
-      "game_requirement": " ",
       "download_button": "Get NebulaCoop",
       "setup_link": "Read the setup guide →",
       "scroll_prompt": "SCROLL",
-      "regenerate_button": "↻ Regenerate star bits",
-      "interaction_hint": "Sweep through the Star Bits to collect them.",
-      "coop_tag": "CO-OP",
+      "interaction_hint": "Click or tap the sky to send another player into orbit.",
+      "coop_tag": "Co-op",
       "coop_button": "What co-op adds",
       "credit_1": "keepvaibin",
       "credit_separator": "|",
@@ -176,14 +168,7 @@
   },
   "messages": {
     "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players.",
-    "formWord": "✧ Form the word",
-    "releaseWord": "✧ Release the word",
-    "gathering": "Star bits are gathering into Nebula.",
-    "releasing": "Star bits are drifting back out of Nebula.",
-    "formed": "Nebula formed. Sweep over the letters to collect their star bits.",
-    "released": "Star bits released.",
-    "collected": "{count} star bits collected. Regenerate to bring them back.",
-    "regenerated": "All star bits regenerated.",
-    "fallbackHint": "A quiet corner of the galaxy"
+    "launched": "{count} of {max} players in orbit.",
+    "full": "All {max} players are in orbit. Click again to start over with two."
   }
 }

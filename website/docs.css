@@ -1,33 +1,26 @@
 /* Nebula modding docs: a standalone documentation site with its own top bar, a full-height
    sidebar and a wide reading area. It shares no styles with the player site. */
-@font-face {
-  font-family: Delfino;
-  src:
-    url('/fonts/Delfino.woff2') format('woff2'),
-    url('/fonts/Delfino.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+@import '@fontsource-variable/fredoka/index.css';
+@import '@fontsource-variable/nunito/index.css';
 :root {
   color-scheme: dark;
   --topbar: 64px;
   --side: clamp(280px, 19vw, 340px);
-  --bg: #070d1f;
-  --bg-raised: #0c1630;
-  --bg-sunk: #050a18;
-  --line: #1d2c4b;
-  --line-soft: #16233e;
-  --ink: #d4e0ef;
-  --ink-soft: #a3b6ce;
-  --ink-faint: #7b90ad;
-  --heading: #f3f8ff;
-  --link: #8fd2ff;
-  --link-hover: #c7ebff;
-  --accent: #ffe598;
-  --focus: #7ffff3;
-  --display: Delfino, 'Trebuchet MS', sans-serif;
-  --text: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  --bg: #08061c;
+  --bg-raised: #140f37;
+  --bg-sunk: #060417;
+  --line: #2a2160;
+  --line-soft: #1d1748;
+  --ink: #e4def9;
+  --ink-soft: #c3baea;
+  --ink-faint: #958bc6;
+  --heading: #f8f5ff;
+  --link: #5fe1ff;
+  --link-hover: #b5f2ff;
+  --accent: #ffd15c;
+  --focus: #ffd15c;
+  --display: 'Fredoka Variable', 'Trebuchet MS', sans-serif;
+  --text: 'Nunito Variable', 'Segoe UI', Arial, sans-serif;
   --mono: Consolas, 'SFMono-Regular', Menlo, monospace;
 }
 *,
@@ -42,7 +35,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(ellipse 1200px 600px at 75% -10%, #1b356533, transparent 70%), var(--bg);
+    radial-gradient(ellipse 1200px 600px at 75% -10%, #5b2fa233, transparent 70%), var(--bg);
   color: var(--ink);
   font: 16px/1.6 var(--text);
 }
@@ -192,7 +185,7 @@ kbd {
   border-right: 1px solid var(--line);
   padding: 20px 16px 40px;
   scrollbar-width: thin;
-  scrollbar-color: #2e4a74 transparent;
+  scrollbar-color: #3a2d78 transparent;
 }
 .docs-sidebar-top {
   display: flex;
@@ -210,7 +203,7 @@ kbd {
 }
 .docs-home-link:hover,
 .docs-home-link[aria-current='page'] {
-  background: #14254a;
+  background: #1e1650;
 }
 .docs-close {
   display: none;
@@ -266,7 +259,7 @@ a.docs-nav-heading[aria-current='page'] {
   transform: rotate(90deg);
 }
 .docs-nav-group > summary:hover {
-  background: #111f3d;
+  background: #17113f;
 }
 .docs-nav-icon {
   flex: 0 0 26px;
@@ -292,11 +285,11 @@ a.docs-nav-heading[aria-current='page'] {
   overflow-wrap: anywhere;
 }
 .docs-nav li a:hover {
-  background: #111f3d;
+  background: #17113f;
   color: #fff;
 }
 .docs-nav li a[aria-current='page'] {
-  background: #17305a;
+  background: #241a5c;
   color: #fff;
   box-shadow: inset 3px 0 var(--accent);
   font-weight: bold;
@@ -315,9 +308,9 @@ a.docs-nav-heading[aria-current='page'] {
   width: 100%;
   height: 40px;
   padding: 0 40px 0 14px;
-  border: 1px solid #2c4470;
+  border: 1px solid #3a2c7a;
   border-radius: 10px;
-  background: #0d1a35;
+  background: #130e35;
   color: var(--heading);
   font: 15px var(--text);
 }
@@ -346,7 +339,7 @@ a.docs-nav-heading[aria-current='page'] {
   margin: 0;
   padding: 6px;
   background: #0e1a36;
-  border: 1px solid #2c4470;
+  border: 1px solid #3a2c7a;
   border-radius: 12px;
   box-shadow: 0 18px 40px #000c;
   list-style: none;
@@ -367,7 +360,7 @@ a.docs-nav-heading[aria-current='page'] {
 }
 .docs-results a:hover,
 .docs-results a[aria-selected='true'] {
-  background: #17305a;
+  background: #241a5c;
 }
 .docs-results strong {
   display: block;
@@ -495,10 +488,12 @@ a.docs-nav-heading[aria-current='page'] {
   padding: 0 20px;
   border-radius: 22px;
   font: 15px var(--display);
-  color: #143457;
-  background: linear-gradient(#f7ffff, #bde8ff);
-  border: 1px solid #e4faff;
-  box-shadow: 0 3px 0 #437ca1;
+  font-weight: 600;
+  color: #2b1650;
+  background: linear-gradient(180deg, #fff1b8, #ffd15c 55%, #f5a524);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 0 #8a4f0e;
   transition: transform 0.15s;
 }
 .docs-button:hover {
@@ -701,7 +696,7 @@ a.docs-nav-heading[aria-current='page'] {
   overflow-x: auto;
   tab-size: 4;
   scrollbar-width: thin;
-  scrollbar-color: #2e4a74 transparent;
+  scrollbar-color: #3a2d78 transparent;
 }
 .code-block pre:focus-visible {
   outline: 2px solid var(--focus);
@@ -790,7 +785,7 @@ a.docs-nav-heading[aria-current='page'] {
   white-space: nowrap;
 }
 .docs-article tbody tr:nth-child(even) {
-  background: #0a142b;
+  background: #0f0b2b;
 }
 .docs-article tr:last-child td {
   border-bottom: 0;
@@ -872,8 +867,8 @@ a.docs-nav-heading[aria-current='page'] {
   color: var(--ink-faint);
 }
 .docs-pager a:hover {
-  border-color: #3a5c8f;
-  background: #0d1a35;
+  border-color: #4b3a9a;
+  background: #130e35;
 }
 .docs-pager strong {
   display: block;
@@ -914,7 +909,7 @@ a.docs-nav-heading[aria-current='page'] {
     transform 0.15s;
 }
 .docs-card:hover {
-  border-color: #3a5c8f;
+  border-color: #4b3a9a;
   transform: translateY(-2px);
 }
 .docs-card strong {
@@ -987,12 +982,12 @@ a.docs-nav-heading[aria-current='page'] {
 .docs-popular a {
   display: inline-block;
   padding: 5px 12px;
-  border: 1px solid #2c4470;
+  border: 1px solid #3a2c7a;
   border-radius: 16px;
   color: var(--ink);
 }
 .docs-popular a:hover {
-  background: #14254a;
+  background: #1e1650;
 }
 .docs-notice {
   max-width: 900px;
@@ -1048,7 +1043,7 @@ a.docs-nav-heading[aria-current='page'] {
   transition: border-color 0.15s;
 }
 .docs-step:hover {
-  border-color: #3a5c8f;
+  border-color: #4b3a9a;
 }
 .docs-step strong {
   display: block;
@@ -1149,7 +1144,7 @@ a.docs-nav-heading[aria-current='page'] {
     padding: 14px 18px;
     border: 1px solid var(--line);
     border-radius: 12px;
-    background: #0a142b;
+    background: #0f0b2b;
   }
   .docs-toc ol {
     columns: 2 240px;
@@ -1203,7 +1198,7 @@ a.docs-nav-heading[aria-current='page'] {
     font-size: 20px;
     color: var(--heading);
     background: #0f1c38;
-    border: 1px solid #2c4470;
+    border: 1px solid #3a2c7a;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -1255,8 +1250,8 @@ a.docs-nav-heading[aria-current='page'] {
     min-height: 44px;
     padding: 0 14px;
     color: var(--ink);
-    background: #14254a;
-    border: 1px solid #2c4470;
+    background: #1e1650;
+    border: 1px solid #3a2c7a;
     border-radius: 10px;
     cursor: pointer;
   }

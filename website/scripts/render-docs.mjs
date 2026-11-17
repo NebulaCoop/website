@@ -407,7 +407,6 @@ function documentShell({ site, depth, title, description, path, bodyClass, sideb
 ${shareTags(path, { type: path === DOCS ? 'website' : 'article' })}
 <meta property="og:title" content="${escapeHtml(title)}" />
 <meta property="og:description" content="${escapeHtml(description)}" />
-<link rel="preload" href="${r}fonts/Delfino.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="${r}docs.css" />
 </head>
 <body class="docs ${bodyClass}">
