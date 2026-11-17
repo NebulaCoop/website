@@ -94,7 +94,7 @@
       "label_3": "↓",
       "eyebrow": "SUPER MARIO GALAXY, ONLINE CO-OP",
       "title": "NEBULA",
-      "tagline": "A little closer to the stars, together.",
+      "tagline": "A little closer to the stars,",
       "intro": "Super Mario Galaxy with friends, running natively on your PC. Host a room, share its code and explore the galaxies together.",
       "platforms": "WINDOWS · 2 TO 16 PLAYERS",
       "game_requirement": " ",
@@ -107,7 +107,8 @@
       "coop_button": "What co-op adds",
       "credit_1": "keepvaibin",
       "credit_separator": "|",
-      "credit_2": "Mackery"
+      "credit_2": "Mackery",
+      "tagline_together": "together."
     },
     "footer": {
       "link_1": "nebula co-op",
