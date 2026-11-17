@@ -33,8 +33,9 @@ header.writeUInt16LE(32, 12);
 header.writeUInt32LE(image.length, 14);
 header.writeUInt32LE(22, 18);
 await writeFile(resolve(root, 'public/favicon.ico'), Buffer.concat([header, image]));
-// The cursor: the game's hand pointer from its menus, cut out of a screenshot (assets/brand/hand-pointer.png).
-// 36px tall; its hotspot is the tip of the index finger, which theme.css and docs.css name.
+// The cursor: the game's menu hand pointer (assets/brand/hand-pointer.png), put together from the textures and
+// colours in the game's LayoutData/DPDPointer.arc. 36px tall; its hotspot is the point the game aims with, near the
+// tip of the index finger, which theme.css and docs.css name.
 await mkdir(resolve(root, 'public/cursor'), { recursive: true });
 const hand = sharp(await readFile(resolve(root, 'assets/brand/hand-pointer.png'))).resize({
   height: 36,

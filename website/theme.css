@@ -53,8 +53,8 @@ body,
 }
 /* The cursor: the hand pointer from the game's menus, everywhere you can point or click. */
 html {
-  --star-cursor: url('/cursor/hand-pointer.png') 8 1, auto;
-  --star-cursor-hover: url('/cursor/hand-pointer.png') 8 1, pointer;
+  --star-cursor: url('/cursor/hand-pointer.png') 8 4, auto;
+  --star-cursor-hover: url('/cursor/hand-pointer.png') 8 4, pointer;
   cursor: var(--star-cursor);
 }
 a,
