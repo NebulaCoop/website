@@ -1,0 +1,18 @@
+{
+  // Lets Cloudflare Workers Builds publish the site from the repository root, with no build settings filled in:
+  // wrangler runs the build below first, then uploads website/dist. Keep the rest the same as website/wrangler.jsonc,
+  // which is used when Workers Builds' root directory is set to `website` (tests/wrangler-config.test.js checks this).
+  "name": "website",
+  "compatibility_date": "2026-10-01",
+  "build": {
+    "command": "cd website && npm ci && npm run build",
+  },
+  "assets": {
+    "directory": "./website/dist",
+    // Any address with no page gets 404.html, with a 404 status.
+    "not_found_handling": "404-page",
+    // /coop and /coop/ both reach coop/index.html.
+    "html_handling": "auto-trailing-slash",
+  },
+  "routes": [{ "pattern": "nebula.mackery.com", "custom_domain": true }],
+}
