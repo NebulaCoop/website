@@ -104,7 +104,10 @@
       "regenerate_button": "↻ Regenerate star bits",
       "interaction_hint": "Sweep through the Star Bits to collect them.",
       "coop_tag": "CO-OP",
-      "coop_button": "What co-op adds"
+      "coop_button": "What co-op adds",
+      "credit_1": "keepvaibin",
+      "credit_separator": "|",
+      "credit_2": "Mackery"
     },
     "footer": {
       "link_1": "nebula co-op",
