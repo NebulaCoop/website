@@ -1,0 +1,8 @@
+{
+  "name": "nebulacoop-website-root",
+  "private": true,
+  "description": "Lets Cloudflare Workers Builds run `npm run build` from the repository root. The site is in website/.",
+  "scripts": {
+    "build": "cd website && npm ci && npm run build"
+  }
+}

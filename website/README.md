@@ -54,10 +54,10 @@ only (`wrangler.jsonc`). Static asset requests are free and unlimited on the Wor
 Cloudflare dashboard of the account that holds mackery.com:
 
 1. **Workers & Pages > Create > Import a repository**, and pick `NebulaCoop/website`.
-2. Keep the Worker's name `website` (it must match `name` in `wrangler.jsonc`). Under **Advanced settings**:
-   **Root directory** `website`, **Build command** `npm run build`, **Deploy command** `npx wrangler deploy`.
-   Without the root directory and the build, Cloudflare serves the unbuilt source, and the home page's models,
-   fonts, images and the modding docs are missing.
+2. Keep the Worker's name `website` (it must match `name` in both `wrangler.jsonc` files). The build settings can
+   stay empty: `npx wrangler deploy` from the repository root reads the root `wrangler.jsonc`, whose `build.command`
+   builds the site before `website/dist` is uploaded. Setting **Root directory** `website`, **Build command**
+   `npm run build` also works, and uses this folder's `wrangler.jsonc`.
 3. Optional: a build variable `GITHUB_TOKEN` (a token with no scopes is enough) lifts GitHub's rate limit for the
    release and download count the build reads.
 
