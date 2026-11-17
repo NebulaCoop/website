@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A problem in the game
+    url: https://github.com/NebulaCoop/nebula-coop/issues/new/choose
+    about: Crashes, co-op, Setup and anything that isn't the website.
+  - name: Report a security vulnerability
+    url: https://github.com/NebulaCoop/nebula-coop/security/advisories/new
+    about: Report security problems privately, never in a public issue.
+  - name: Ask on Discord
+    url: https://discord.gg/hNbgFtaRHv
+    about: Questions and help.

@@ -1,0 +1,17 @@
+name: Suggestion
+description: Suggest a new page, section or feature for the site.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?
+      description: Who it helps, and what they can't find or do today.
+    validations:
+      required: true
