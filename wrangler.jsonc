@@ -2,7 +2,7 @@
   // Lets Cloudflare Workers Builds publish the site from the repository root, with no build settings filled in:
   // wrangler runs the build below first, then uploads website/dist. Keep the rest the same as website/wrangler.jsonc,
   // which is used when Workers Builds' root directory is set to `website` (tests/wrangler-config.test.js checks this).
-  "name": "website",
+  "name": "nebulaweb",
   "compatibility_date": "2026-10-01",
   "build": {
     "command": "cd website && npm ci && npm run build",
