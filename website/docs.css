@@ -23,6 +23,25 @@
   --text: 'Nunito Variable', 'Segoe UI', Arial, sans-serif;
   --mono: Consolas, 'SFMono-Regular', Menlo, monospace;
 }
+/* The site's star pointer cursor, as in theme.css. */
+html {
+  --star-cursor: url('/cursor/star-pointer.svg') 16 16, url('/cursor/star-pointer.png') 16 16, auto;
+  --star-cursor-hover:
+    url('/cursor/star-pointer-hover.svg') 16 16, url('/cursor/star-pointer-hover.png') 16 16,
+    pointer;
+  cursor: var(--star-cursor);
+}
+a,
+button,
+summary,
+label,
+[role='button'] {
+  cursor: var(--star-cursor-hover);
+}
+input,
+textarea {
+  cursor: text;
+}
 *,
 *::before,
 *::after {
@@ -240,7 +259,7 @@ a.docs-nav-heading[aria-current='page'] {
   padding: 11px 14px;
   border-radius: 10px;
   list-style: none;
-  cursor: pointer;
+  cursor: var(--star-cursor-hover);
   font: 16px/1.3 var(--display);
   color: #e6f0fc;
 }
@@ -717,7 +736,7 @@ a.docs-nav-heading[aria-current='page'] {
   border: 1px solid #ffffff26;
   border-radius: 7px;
   padding: 3px 10px;
-  cursor: pointer;
+  cursor: var(--star-cursor-hover);
 }
 .copy-code:hover {
   background: #ffffff24;
@@ -1156,7 +1175,7 @@ a.docs-nav-heading[aria-current='page'] {
     align-items: center;
     justify-content: space-between;
     margin: 0;
-    cursor: pointer;
+    cursor: var(--star-cursor-hover);
     min-height: 28px;
   }
   .docs-toc-title::after {
@@ -1200,7 +1219,7 @@ a.docs-nav-heading[aria-current='page'] {
     background: #0f1c38;
     border: 1px solid #3a2c7a;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: var(--star-cursor-hover);
   }
   .docs-brand {
     font-size: 23px;
@@ -1253,7 +1272,7 @@ a.docs-nav-heading[aria-current='page'] {
     background: #1e1650;
     border: 1px solid #3a2c7a;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: var(--star-cursor-hover);
   }
   .docs-nav li a,
   .docs-nav-group > summary {

@@ -180,7 +180,7 @@ h1 {
 .play-controls button {
   border: 1px solid #ffffff22;
   border-radius: 30px;
-  cursor: pointer;
+  cursor: var(--star-cursor-hover);
 }
 .play-controls button:hover,
 .play-controls button[aria-pressed='true'] {
@@ -235,7 +235,7 @@ details {
   border-bottom: 1px solid var(--line);
 }
 summary {
-  cursor: pointer;
+  cursor: var(--star-cursor-hover);
   padding-right: 15px;
 }
 details p a {
