@@ -1,7 +1,7 @@
 {
   // nebula.mackery.com on Cloudflare Workers: the built site (dist/) as static assets, no Worker code.
   // Workers Builds builds it from this folder (README.md, "Publishing").
-  "name": "website",
+  "name": "nebulaweb",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",

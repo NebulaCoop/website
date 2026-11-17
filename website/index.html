@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#050609" />
+    <meta name="theme-color" content="#08061c" />
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="./favicon-32.png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
@@ -17,10 +17,9 @@
       property="og:description"
       content="Online co-op for Super Mario Galaxy on PC. A fork of Nebula, the native port, with rooms of up to 16 players, room codes, shared worlds and co-op mods."
     />
-    <link rel="preload" href="./fonts/Delfino.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./reference-ui.css" />
     <link rel="stylesheet" href="./player-site.css" />
+    <link rel="stylesheet" href="./theme.css" />
     <link rel="canonical" href="https://nebula.mackery.com/" />
     <meta property="og:site_name" content="NebulaCoop" />
     <meta property="og:type" content="website" />
@@ -30,17 +29,7 @@
   </head>
   <body class="home-page">
     <a class="skip" href="#main-content">Skip to content</a>
-    <div id="space" aria-hidden="true"></div>
-    <div class="galaxy-scenery" aria-hidden="true">
-      <div class="planet moon"></div>
-      <div class="planet garden"></div>
-      <div class="horizon"></div>
-    </div>
-    <div class="star-hud" aria-hidden="true">
-      <span class="hud-star">✦</span><span>× <span id="star-count">0</span></span
-      ><small>STAR BITS</small>
-    </div>
-    <div class="star-cursor" aria-hidden="true">✧</div>
+    <div id="space" class="comet-sky" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="./" aria-label="NebulaCoop home"
         ><img class="brand-logo" src="./brand-logo.png" alt="" width="34" height="34" /> nebula
@@ -56,39 +45,40 @@
     </header>
     <main id="main-content">
       <section class="hero" aria-labelledby="title">
-        <div class="eyebrow"><span></span> SUPER MARIO GALAXY, ONLINE CO-OP</div>
-        <h1 id="title">
-          <span class="title-text">NEBULA</span><span class="title-star" aria-hidden="true">✦</span
-          ><span class="title-coop"> CO-OP</span>
-        </h1>
-        <p class="tagline">
-          A little closer to the stars,
-          <span class="tagline-together">together.</span>
-        </p>
-        <p class="intro">
-          Super Mario Galaxy with friends, running natively on your PC. Host a room, share its code
-          and explore the galaxies together.
-        </p>
-        <div class="actions">
-          <a class="button primary" href="./coop/">What co-op adds</a
-          ><a class="button secondary" href="./download/">Get NebulaCoop</a>
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> SUPER MARIO GALAXY · ONLINE CO-OP</div>
+          <h1 id="title">
+            <span class="title-text">Nebula</span><span class="title-coop">Co-op</span>
+          </h1>
+          <p class="tagline">
+            A little closer to the stars,
+            <span class="tagline-together"><span class="together-word">together.</span></span>
+          </p>
+          <p class="intro">
+            Super Mario Galaxy with friends, running natively on your PC. Host a room, share its
+            code and explore the galaxies together.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="./download/">Get NebulaCoop</a
+            ><a class="button secondary" href="./coop/">What co-op adds</a>
+          </div>
+          <a class="hero-guide" href="./guide/">Read the setup guide →</a>
+          <p class="platform">WINDOWS · 2 TO 16 PLAYERS</p>
         </div>
-        <a class="hero-guide" href="./guide/">Read the setup guide →</a>
-        <p class="platform">WINDOWS · 2 TO 16 PLAYERS<br /></p>
         <div class="hero-bottom">
           <a href="#available" class="scroll"><span>↓</span> SCROLL</a>
-          <div class="play-controls">
-            <button id="formation" aria-pressed="false">✧ Form the word</button
-            ><button id="regenerate">↻ Regenerate star bits</button
-            ><span id="collection-status" class="sr-only" role="status" aria-live="polite"></span>
+          <div class="hero-sign">
+            <p class="hero-credit">
+              <a href="https://github.com/keepvaibin">keepvaibin</a>
+              <span aria-hidden="true">|</span>
+              <a href="https://github.com/Mackery6969">Mackery</a>
+            </p>
+            <p class="interaction-hint" id="hint">
+              Click or tap the sky to send another player into orbit.
+            </p>
           </div>
+          <span id="orbit-status" class="sr-only" role="status" aria-live="polite"></span>
         </div>
-        <p class="hero-credit">
-          <a href="https://github.com/keepvaibin">keepvaibin</a>
-          <span aria-hidden="true">|</span>
-          <a href="https://github.com/Mackery6969">Mackery</a>
-        </p>
-        <div class="interaction-hint" id="hint">Sweep through the Star Bits to collect them.</div>
       </section>
       <div class="glance-strip" aria-label="NebulaCoop at a glance">
         <div><strong>16</strong><span>Players per room</span></div>
@@ -97,7 +87,7 @@
           <strong
             data-download-count=""
             title="Total GitHub release-asset downloads, not unique players."
-            >635</strong
+            >646</strong
           ><span>Total downloads</span>
         </div>
         <div>
@@ -372,15 +362,8 @@
     <script id="page-messages" type="application/json">
       {
         "downloadCountTitle": "GitHub release-asset downloads across {releases} releases. Not unique players.",
-        "formWord": "✧ Form the word",
-        "releaseWord": "✧ Release the word",
-        "gathering": "Star bits are gathering into Nebula.",
-        "releasing": "Star bits are drifting back out of Nebula.",
-        "formed": "Nebula formed. Sweep over the letters to collect their star bits.",
-        "released": "Star bits released.",
-        "collected": "{count} star bits collected. Regenerate to bring them back.",
-        "regenerated": "All star bits regenerated.",
-        "fallbackHint": "A quiet corner of the galaxy"
+        "launched": "{count} of {max} players in orbit.",
+        "full": "All {max} players are in orbit. Click again to start over with two."
       }
     </script>
   </body>

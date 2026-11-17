@@ -8,7 +8,7 @@
 }
 .blog-post-heading > p.breadcrumb-trail {
   margin: 0;
-  color: #b6ddff;
+  color: #5fe1ff;
   font-size: 13px;
 }
 .blog-post-heading h1 {
@@ -20,7 +20,7 @@
 .blog-post-heading > p.blog-post-meta {
   margin-top: 18px;
   font-size: 14px;
-  color: #b6cde4;
+  color: #a69cd6;
 }
 .blog-list {
   list-style: none;
@@ -30,7 +30,7 @@
 .blog-list > li + li {
   margin-top: 6px;
   padding-top: 26px;
-  border-top: 1px solid #b8cfdf;
+  border-top: 1px solid #c9b8ff33;
 }
 .blog-entry h2 {
   margin: 4px 0 10px;
@@ -50,12 +50,12 @@
     16px/1.7 'Trebuchet MS',
     Arial,
     sans-serif;
-  color: #3d526d;
+  color: #d3cbf3;
 }
 .blog-entry .blog-entry-date {
   font-size: 13px;
   letter-spacing: 0.4px;
-  color: #286887;
+  color: #ff79c6;
 }
 .blog-entry-more {
   margin-top: 10px;
@@ -67,7 +67,7 @@
     17px/1.8 'Trebuchet MS',
     Arial,
     sans-serif;
-  color: #33475f;
+  color: #d3cbf3;
   overflow-wrap: break-word;
 }
 .post-prose > :first-child {
@@ -117,12 +117,12 @@
   margin: 6px 0 0;
 }
 .post-prose a {
-  color: #14628a;
+  color: #5fe1ff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .post-prose a:hover {
-  color: #0b3f5e;
+  color: #b5f2ff;
 }
 /* The site styles links that start a list item as buttons; in a post they stay plain links. */
 .post-prose li > a,
@@ -135,12 +135,12 @@
   font-size: inherit;
 }
 .post-prose strong {
-  color: #1f3149;
+  color: #f4f0ff;
 }
 .post-prose blockquote {
   padding: 4px 0 4px 20px;
-  border-left: 4px solid #8fc6ea;
-  color: #4a6382;
+  border-left: 4px solid #ffd15c;
+  color: #d3cbf3;
   font-style: italic;
 }
 .post-prose blockquote p:last-child {
@@ -149,13 +149,13 @@
 .post-prose hr {
   margin: 36px 0;
   border: 0;
-  border-top: 1px solid #b8cfdf;
+  border-top: 1px solid #c9b8ff33;
 }
 .post-prose :not(pre) > code {
   padding: 1px 6px;
   border-radius: 5px;
-  background: #e2eef9;
-  color: #1f3a57;
+  background: #ffffff14;
+  color: #ffe9a8;
   font-size: 0.88em;
 }
 .post-prose .text-small,
@@ -170,10 +170,10 @@
   line-height: 1.35;
 }
 .post-prose .text-muted {
-  color: #6a7f97;
+  color: #a69cd6;
 }
 .post-prose mark {
-  background: #ffe898;
+  background: #ffd15c55;
   color: inherit;
   padding: 0 3px;
   border-radius: 3px;
@@ -183,8 +183,8 @@
 .post-code {
   margin: 0 0 24px;
   border-radius: 14px;
-  background: #0d1a33;
-  border: 1px solid #27406a;
+  background: #0f0b2b;
+  border: 1px solid #c9b8ff4d;
 }
 .post-code pre {
   margin: 0;
@@ -237,9 +237,9 @@
 .post-table {
   margin: 0 0 24px;
   overflow-x: auto;
-  border: 1px solid #779fc2;
+  border: 1px solid #c9b8ff4d;
   border-radius: 12px;
-  background: #f1f8ff;
+  background: #0f0b2bcc;
 }
 .post-table table {
   font-size: 15px;
@@ -269,7 +269,7 @@
 }
 .post-media video {
   width: 100%;
-  background: #08101f;
+  background: #060417;
 }
 .post-embed {
   position: relative;
@@ -277,7 +277,7 @@
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
-  background: #08101f;
+  background: #060417;
 }
 .post-embed iframe {
   position: absolute;
@@ -291,7 +291,7 @@
   text-align: center;
   font-size: 14px;
   line-height: 1.6;
-  color: #5b708b;
+  color: #a69cd6;
 }
 
 /* Older and newer posts */
@@ -305,15 +305,15 @@
 .post-pager a {
   display: block;
   padding: 16px 20px;
-  border: 1px solid #8db9df88;
+  border: 1px solid #c9b8ff4d;
   border-radius: 15px;
-  background: #193254aa;
-  color: #d7e7f7;
+  background: #ffffff09;
+  color: #d3cbf3;
   font-size: 13px;
   text-decoration: none;
 }
 .post-pager a:hover {
-  border-color: #c7ebff;
+  border-color: #ffd15c;
 }
 .post-pager strong {
   display: block;

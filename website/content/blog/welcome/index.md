@@ -5,7 +5,7 @@ summary: Downloads, the setup guide, how to play online and the co-op modding do
 author: NebulaCoop
 ---
 
-NebulaCoop now has its own website. It is a remix of [Nebula's website](https://nebula.keepvaibin.com/), made by keepvaibin, with everything co-op added on top.
+NebulaCoop now has its own website. It is built from [Nebula's website](https://nebula.keepvaibin.com/) by keepvaibin, with a look of its own and everything co-op added on top.
 
 Here is what you can find on it:
 

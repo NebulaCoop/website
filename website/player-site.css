@@ -162,7 +162,7 @@ body > .site-footer {
 .glance-strip strong {
   display: block;
   font:
-    30px Delfino,
+    30px 'Fredoka Variable',
     sans-serif;
   color: #d4edff;
 }
@@ -380,7 +380,7 @@ tr:last-child th {
 }
 .media-placeholder strong {
   font:
-    26px Delfino,
+    26px 'Fredoka Variable',
     sans-serif;
 }
 .media-placeholder p {
@@ -496,7 +496,7 @@ kbd {
 }
 .site-footer .footer-top p {
   font:
-    15px Delfino,
+    15px 'Fredoka Variable',
     sans-serif;
   color: #c4ddf5;
 }

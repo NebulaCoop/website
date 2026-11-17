@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#050609" />
+    <meta name="theme-color" content="#08061c" />
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="./favicon-32.png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
@@ -11,25 +11,13 @@
     <meta name="description" content="{{metadata.description}}" />
     <meta property="og:title" content="{{metadata.title}}" />
     <meta property="og:description" content="{{metadata.description}}" />
-    <link rel="preload" href="./fonts/Delfino.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./reference-ui.css" />
     <link rel="stylesheet" href="./player-site.css" />
+    <link rel="stylesheet" href="./theme.css" />
   </head>
   <body class="home-page">
     <a class="skip" href="#main-content">{{text.general.link_1}}</a>
-    <div id="space" aria-hidden="true"></div>
-    <div class="galaxy-scenery" aria-hidden="true">
-      <div class="planet moon"></div>
-      <div class="planet garden"></div>
-      <div class="horizon"></div>
-    </div>
-    <div class="star-hud" aria-hidden="true">
-      <span class="hud-star">{{text.general.label_2}}</span
-      ><span>{{text.general.label_3}} <span id="star-count">{{text.general.label_4}}</span></span
-      ><small>{{text.general.note_1}}</small>
-    </div>
-    <div class="star-cursor" aria-hidden="true">{{text.general.div_1}}</div>
+    <div id="space" class="comet-sky" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="./" aria-label="{{text.header.aria_label_1}}"
         ><img class="brand-logo" src="./brand-logo.png" alt="" width="34" height="34" />
@@ -47,39 +35,40 @@
     </header>
     <main id="main-content">
       <section class="hero" aria-labelledby="title">
-        <div class="eyebrow"><span></span> {{text.hero.eyebrow}}</div>
-        <h1 id="title">
-          <span class="title-text">{{text.hero.title}}</span
-          ><span class="title-star" aria-hidden="true">{{text.hero.label_2}}</span
-          ><span class="title-coop"> {{text.hero.coop_tag}}</span>
-        </h1>
-        <p class="tagline">
-          {{text.hero.tagline}}
-          <span class="tagline-together">{{text.hero.tagline_together}}</span>
-        </p>
-        <p class="intro">{{text.hero.intro}}</p>
-        <div class="actions">
-          <a class="button primary" href="./coop/">{{text.hero.coop_button}}</a
-          ><a class="button secondary" href="./download/">{{text.hero.download_button}}</a>
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> {{text.hero.eyebrow}}</div>
+          <h1 id="title">
+            <span class="title-text">{{text.hero.title}}</span
+            ><span class="title-coop">{{text.hero.coop_tag}}</span>
+          </h1>
+          <p class="tagline">
+            {{text.hero.tagline}}
+            <span class="tagline-together"
+              ><span class="together-word">{{text.hero.tagline_together}}</span></span
+            >
+          </p>
+          <p class="intro">{{text.hero.intro}}</p>
+          <div class="actions">
+            <a class="button primary" href="./download/">{{text.hero.download_button}}</a
+            ><a class="button secondary" href="./coop/">{{text.hero.coop_button}}</a>
+          </div>
+          <a class="hero-guide" href="./guide/">{{text.hero.setup_link}}</a>
+          <p class="platform">{{text.hero.platforms}}</p>
         </div>
-        <a class="hero-guide" href="./guide/">{{text.hero.setup_link}}</a>
-        <p class="platform">{{text.hero.platforms}}<br />{{text.hero.game_requirement}}</p>
         <div class="hero-bottom">
           <a href="#available" class="scroll"
             ><span>{{text.hero.label_3}}</span> {{text.hero.scroll_prompt}}</a
           >
-          <div class="play-controls">
-            <button id="formation" aria-pressed="false">{{messages.formWord}}</button
-            ><button id="regenerate">{{text.hero.regenerate_button}}</button
-            ><span id="collection-status" class="sr-only" role="status" aria-live="polite"></span>
+          <div class="hero-sign">
+            <p class="hero-credit">
+              <a href="https://github.com/keepvaibin">{{text.hero.credit_1}}</a>
+              <span aria-hidden="true">{{text.hero.credit_separator}}</span>
+              <a href="https://github.com/Mackery6969">{{text.hero.credit_2}}</a>
+            </p>
+            <p class="interaction-hint" id="hint">{{text.hero.interaction_hint}}</p>
           </div>
+          <span id="orbit-status" class="sr-only" role="status" aria-live="polite"></span>
         </div>
-        <p class="hero-credit">
-          <a href="https://github.com/keepvaibin">{{text.hero.credit_1}}</a>
-          <span aria-hidden="true">{{text.hero.credit_separator}}</span>
-          <a href="https://github.com/Mackery6969">{{text.hero.credit_2}}</a>
-        </p>
-        <div class="interaction-hint" id="hint">{{text.hero.interaction_hint}}</div>
       </section>
       <div class="glance-strip" aria-label="{{text.stats.aria_label_1}}">
         <div><strong>{{text.stats.emphasis_1}}</strong><span>{{text.stats.label_1}}</span></div>
