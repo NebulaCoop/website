@@ -18,6 +18,9 @@ test('the root and website/ Wrangler configs publish the same Worker', () => {
   assert.equal(root.name, site.name);
   assert.equal(root.compatibility_date, site.compatibility_date);
   assert.deepEqual(root.routes, site.routes);
+  // Workers Builds runs `wrangler preview` on pull requests, which fails without a `previews` block.
+  assert.deepEqual(root.previews, site.previews);
+  assert.equal(typeof site.previews, 'object');
   assert.equal(root.assets.directory, './website/dist');
   assert.equal(site.assets.directory, './dist');
   assert.deepEqual({ ...root.assets, directory: '' }, { ...site.assets, directory: '' });

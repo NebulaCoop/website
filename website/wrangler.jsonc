@@ -3,6 +3,9 @@
   // Workers Builds builds it from this folder (README.md, "Publishing").
   "name": "nebulaweb",
   "compatibility_date": "2026-10-01",
+  // Workers Builds runs `wrangler preview` on pull requests, which needs this block (it can be empty). Previews take
+  // nothing from it yet; production deploys ignore it.
+  "previews": {},
   "assets": {
     "directory": "./dist",
     // Any address with no page gets 404.html, with a 404 status.

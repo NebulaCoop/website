@@ -4,6 +4,9 @@
   // which is used when Workers Builds' root directory is set to `website` (tests/wrangler-config.test.js checks this).
   "name": "nebulaweb",
   "compatibility_date": "2026-10-01",
+  // Workers Builds runs `wrangler preview` on pull requests, which needs this block (it can be empty). Previews take
+  // nothing from it yet; production deploys ignore it.
+  "previews": {},
   "build": {
     "command": "cd website && npm ci && npm run build",
   },
