@@ -22,7 +22,7 @@ test('player pages have valid local links, anchors and unique IDs', () => {
     for (const match of html.matchAll(/\bhref="([^"]+)"/g)) {
       const href = match[1];
       if (/^(https?:|mailto:)/.test(href)) continue;
-      // A query (the icons' ?v=2) does not change which file is fetched.
+      // A query (the icons' ?v=3) does not change which file is fetched.
       const [pathAndQuery, anchor] = href.split('#');
       const path = pathAndQuery.split('?')[0];
       // The 404 page links from the site root, since it is served at any address.

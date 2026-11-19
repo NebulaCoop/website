@@ -399,9 +399,9 @@ function documentShell({ site, depth, title, description, path, bodyClass, sideb
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#070d1f" />
-<link rel="icon" href="${r}favicon.ico?v=2" sizes="any" />
-<link rel="icon" type="image/png" href="${r}favicon-32.png?v=2" />
-<link rel="apple-touch-icon" href="${r}apple-touch-icon.png?v=2" />
+<link rel="icon" href="${r}favicon.ico?v=3" sizes="any" />
+<link rel="icon" type="image/png" href="${r}favicon-32.png?v=3" />
+<link rel="apple-touch-icon" href="${r}apple-touch-icon.png?v=3" />
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}" />
 ${shareTags(path, { type: path === DOCS ? 'website' : 'article' })}
@@ -670,7 +670,7 @@ function renderRedirect(site, from, to) {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${escapeHtml(site.docs.moved)}</title>
 <meta name="robots" content="noindex" />
-<link rel="icon" href="${rel(depth)}favicon.ico?v=2" sizes="any" />
+<link rel="icon" href="${rel(depth)}favicon.ico?v=3" sizes="any" />
 <meta http-equiv="refresh" content="0; url=${escapeHtml(target)}" />
 <link rel="stylesheet" href="${rel(depth)}docs.css" />
 </head>
